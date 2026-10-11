@@ -2,14 +2,14 @@
 
 ## Priority 1 — High: Fix Broken Navigation
 
-- [ ] **Periksa tautan Dashboard di `index.html`.**
+- [Done] **Periksa tautan Dashboard di `index.html`.**
   - Tautan `dashboard/index.html` mengarah ke file yang tidak ditemukan saat diperiksa.
   - Buat file tersebut jika memang direncanakan, atau hapus/perbaiki tautannya.
   - Test: klik tautan dari halaman utama dan pastikan halaman tujuan dapat dibuka.
 
 ## Priority 2 — High: Organize the Project Structure
 
-- [ ] **Tetapkan struktur folder yang konsisten.**
+- [Done] **Tetapkan struktur folder yang konsisten.**
   - Pisahkan halaman, stylesheet, JavaScript, dan aset jika jumlah file mulai bertambah.
   - Contoh struktur awal:
 
@@ -34,7 +34,7 @@
 
 ## Priority 3 — High: Add a README
 
-- [ ] **Buat `README.md` di root repository.**
+- [Done] **Buat `README.md` di root repository.**
   - Jelaskan tujuan proyek.
   - Cantumkan fitur yang sudah tersedia dan yang masih direncanakan.
   - Jelaskan cara menjalankan atau membuka proyek.
