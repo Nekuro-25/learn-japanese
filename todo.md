@@ -43,14 +43,14 @@
 
 ## Priority 4 — Medium: Improve HTML Semantics
 
-- [ ] **Gunakan elemen HTML sesuai fungsinya.**
+- [Done] **Gunakan elemen HTML sesuai fungsinya.**
   - Gunakan `<header>` untuk bagian pengantar halaman jika sesuai.
   - Gunakan `<nav>` untuk kumpulan tautan navigasi.
   - Gunakan `<main>` untuk konten utama.
   - Gunakan `<footer>` untuk informasi penutup jika diperlukan.
   - Jangan menambahkan elemen hanya agar kode terlihat lebih profesional.
 
-- [ ] **Ganti penggunaan `<br>` untuk mengatur jarak.**
+- [Done] **Ganti penggunaan `<br>` untuk mengatur jarak.**
   - Gunakan elemen yang sesuai untuk struktur konten.
   - Atur jarak visual menggunakan CSS, bukan menumpuk `<br>`.
 

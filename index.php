@@ -23,7 +23,7 @@
         </main>
         <footer>
             <p>
-                My name is Nekuro, and this is my favorite project. See ya!
+                &copy; 2026 Learn Japanese. All rights reserved.
             </p>
         </footer>
 	</body>
