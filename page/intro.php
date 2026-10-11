@@ -19,8 +19,8 @@
 		<p>When i first learn english, i'd REALLY REALLY FUCKKING HATE GRAMMAR because it's so confusing (i still hate it now) or my brain is just stupid to understand all of that... BUT, i don't want my grammar learning experience (The hate one) to affect my Japanese learning, so i would try (so hard, even if it cost me my sanity) to love Bunpo... And search an easiest study method to conquer it XD.</p>
 		<p>That's it guys for the introduction, goodbye</p>
 		<p>
-		<a href="kana/index.html">Go to Kana Introduction</a>
+		<a href="kana/intro-kana.php">Go to Kana Introduction</a>
 		</p>
-		<p><a href="../index.html">Back to Home</a></p>
+		<p><a href="../index.php">Back to Home</a></p>
 	</body>
 </html>

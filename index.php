@@ -9,7 +9,11 @@
 		<h1>LEARN JAPANESE</h1>
 		<p>Learn Japanese • Improve English • Coding Documentation</p>
 		<p>A personal project where I document my Japanese learning journey while Improving my English and Coding skills.</p>
-		<a href="dashboard/index.html">Enter Dashboard</a> <br>
-		<a href="page/intro.html">Introduction</a>
+        <p>
+            <a href="page/intro.php">Introduction</a>
+        </p>
+        <p>
+            <a href="page/kana/intro-kana.php">Kana Introduction</a>
+        </p>
 	</body>
 </html>

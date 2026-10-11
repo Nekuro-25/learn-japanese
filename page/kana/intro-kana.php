@@ -22,10 +22,10 @@
 		<p>I... I don't have a lot opinion about this Kana... It's just, Kanji has all of the hard part about Hiragana and Katakana... It has a lot of rounding corner, sharp turn and it's very... how do I say it? It has a lot of scratch on the paper. The reason is obvious, because it's originally form chinese letters, used for Japanese word.</p>
 		<p>That's it for introduction... I'll explain about Hiragana first in another page.</p>
 		<p>
-		<a href="../intro.html">Back to Introduction</a>
+		<a href="../intro.php">Back to Introduction</a>
 		</p>
 		<p>
-		<a href="../../index.html">Back to Home</a>
+		<a href="../../index.php">Back to Home</a>
 		</p>
 	</body>
 </html>
