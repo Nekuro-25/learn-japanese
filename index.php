@@ -6,14 +6,25 @@
 		<title>Welcome to Learn Japanese</title>
 	</head>
 	<body>
-		<h1>LEARN JAPANESE</h1>
-		<p>Learn Japanese • Improve English • Coding Documentation</p>
-		<p>A personal project where I document my Japanese learning journey while Improving my English and Coding skills.</p>
-        <p>
+        <head>        
+            <h1>LEARN JAPANESE</h1>
+            <p>
+                Learn Japanese • Improve English • Coding Documentation
+            </p>
+        </head>
+        <nav>
             <a href="page/intro.php">Introduction</a>
-        </p>
-        <p>
             <a href="page/kana/intro-kana.php">Kana Introduction</a>
-        </p>
+        </nav>
+        <main>
+		    <p>
+                A personal project where I document my Japanese learning journey while Improving my English and Coding skills.
+            </p>
+        </main>
+        <footer>
+            <p>
+                My name is Nekuro, and this is my favorite project. See ya!
+            </p>
+        </footer>
 	</body>
 </html>
