@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Welcome to Learn Japanese</title>
+        <title>Welcome to Learn Japanese</title>
+        <link rel="stylesheet" href="/css/style.css">
 	</head>
 	<body>
-        <head>        
+        <header>        
             <h1>LEARN JAPANESE</h1>
             <p>
                 Learn Japanese • Improve English • Coding Documentation
             </p>
-        </head>
+        </header>
         <nav>
             <a href="page/intro.php">Introduction</a>
             <a href="page/kana/intro-kana.php">Kana Introduction</a>

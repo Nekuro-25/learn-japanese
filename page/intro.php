@@ -4,11 +4,12 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Learn Japanese</title>
+        <link rel="stylesheet" href"/css/style.css">
 	</head>
 	<body>
-        <head>        
+        <header>        
             <h1>Welcome to Learn Japanese</h1>
-        </head>
+        </header>
         <nav>
 		    <a href="kana/intro-kana.php">Go to Kana Introduction</a>
 		    <a href="../index.php">Back to Home</a>
