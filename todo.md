@@ -56,19 +56,19 @@
 
 ## Priority 5 — Medium: Improve Readability and Consistency
 
-- [ ] **Gunakan format kode yang konsisten.**
+- [Done] **Gunakan format kode yang konsisten.**
   - Terapkan indentasi yang sama.
   - Pisahkan elemen yang berbeda ke baris masing-masing.
   - Hindari indentasi yang tidak konsisten di dalam paragraf dan tautan.
 
-- [ ] **Gunakan konvensi penamaan yang konsisten.**
+- [Done] **Gunakan konvensi penamaan yang konsisten.**
   - Pertahankan pola penamaan file yang mudah dipahami.
   - Gunakan nama file deskriptif dan huruf kecil, misalnya `intro.html` dan `hiragana.html`.
   - Hindari mengganti nama file tanpa memeriksa tautan yang mengarah kepadanya.
 
 ## Priority 6 — Medium: Add Basic Styling
 
-- [ ] **Buat stylesheet eksternal ketika mulai mengatur tampilan.**
+- [Otw] **Buat stylesheet eksternal ketika mulai mengatur tampilan.**
   - Hubungkan CSS melalui elemen `<link>` di dalam `<head>`.
   - Atur tipografi, warna, lebar konten, jarak, dan tampilan tautan.
   - Pastikan halaman nyaman dibaca di layar ponsel dan desktop.

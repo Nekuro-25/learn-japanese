@@ -1,11 +1,57 @@
-/* Global Setting */
+/* Reset Global Setting */
+
+:root {
+  --bg-header: #2c3e50;
+  --text-header: #ffffff;
+  --text-subtitle: #cbd5e1;
+
+  --bg-body: #f4f5f7;
+  --bg-card: #ffffff;
+
+  --text-primary: #1e293b;
+  --text-muted: #64748b;
+  --link-color: #2b6cb0;
+  --link-hover: #1d4ed8;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global body */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  display: flex;
+  line-height: 1.6;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* card */
+.card {
+  width: 100%;
+  max-width: 650px;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid #e2e8f0;
 }
 
 /* Head */
-head {
+header {
+  color: var(--text-header);
+  background-color: var(--bg-header);
+  padding: 30px;
+}
 
+/* Navbar */
+nav {
+  background-color: #ebf0f3;
 }
