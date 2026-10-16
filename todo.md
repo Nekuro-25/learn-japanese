@@ -74,7 +74,7 @@
   - Pastikan halaman nyaman dibaca di layar ponsel dan desktop.
   - Hindari menyalin aturan CSS yang sama ke setiap halaman.
 
-- [ ] **Pastikan struktur tetap berfungsi tanpa JavaScript.**
+- [Done] **Pastikan struktur tetap berfungsi tanpa JavaScript.**
   - Untuk halaman artikel dan materi pembelajaran statis, HTML dan CSS sudah cukup.
   - Tambahkan JavaScript ketika benar-benar membutuhkan interaksi, misalnya kuis Kana.
 

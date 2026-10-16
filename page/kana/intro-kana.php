@@ -14,18 +14,47 @@ require_once __DIR__ . '/../../config.php';
 <body>
     <div class="card">
         <header class="title">
-            <h1>KANA INTRODUCTION</h1>
-            <p class="subtitle">
-                The 3 Types of Japanese Writing Systems
-            </p>
+            <div class="title-text">
+                <h1>KANA INTRODUCTION</h1>
+                <p class="subtitle">
+                    The 3 Types of Japanese Writing Systems
+                </p>
+            </div>
+
+            <!-- Tombol Garis Tiga di Pojok Kanan Atas -->
+            <nav aria-label="Main navigation">
+                <details class="menu-container">
+                    <summary class="menu-toggle" title="Menu">
+                        <span>☰</span>
+                    </summary>
+
+                    <div class="dropdown-content">
+                        <a href="<?php echo $base_url; ?>index.php">
+                            Home
+                        </a>
+                        <a href="<?php echo $base_url; ?>page/intro.php">
+                            Introduction
+                        </a>
+
+                        <span class="nav-label">Kana Section</span>
+                        <div class="nav-group">
+                            <a href="<?php echo $base_url; ?>page/kana/intro-kana.php">
+                                Kana Introduction
+                            </a>
+                        </div>
+
+                        <span class="nav-label">Milestones</span>
+                        <div class="nav-group">
+                            <a href="<?php echo $base_url; ?>milestone/hiragana-m1.php">
+                                Milestone 1: Basic Hiragana
+                            </a>
+                        </div>
+                    </div>
+                </details>
+            </nav>
         </header>
 
         <div class="content-body">
-            <nav class="vertical-nav">
-                <a href="<?php echo $base_url; ?>page/intro.php">Back to Introduction</a>
-                <a href="<?php echo $base_url; ?>index.php">Back to Home</a>
-            </nav>
-
             <main>
                 <div style="display: flex; flex-direction: column; gap: 16px;">
                     <p>
