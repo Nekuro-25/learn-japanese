@@ -68,7 +68,7 @@
 
 ## Priority 6 — Medium: Add Basic Styling
 
-- [Otw] **Buat stylesheet eksternal ketika mulai mengatur tampilan.**
+- [Done] **Buat stylesheet eksternal ketika mulai mengatur tampilan.**
   - Hubungkan CSS melalui elemen `<link>` di dalam `<head>`.
   - Atur tipografi, warna, lebar konten, jarak, dan tampilan tautan.
   - Pastikan halaman nyaman dibaca di layar ponsel dan desktop.
