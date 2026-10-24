@@ -73,7 +73,7 @@ include __DIR__ . '/../../partials/header.php';
 
         <p class="spaced">
             That's it for the introduction. For the full chart, see the
-            <a href="<?= e($base_url) ?>page/kana/hiragana-chart.php">Hiragana chart</a>.
+            <a href="<?= e($base_url) ?>page/kana/hiragana/hiragana-chart.php">Hiragana chart</a>.
         </p>
     </div>
 </main>

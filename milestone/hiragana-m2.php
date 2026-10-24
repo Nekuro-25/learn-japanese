@@ -47,7 +47,7 @@ include __DIR__ . '/../partials/header.php';
         </p>
         <p>
             Practice with the
-            <a href="<?= e($base_url) ?>page/kana/hiragana-chart.php">
+            <a href="<?= e($base_url) ?>page/kana/hiragana/hiragana-chart.php">
                 Hiragana chart →
             </a>
         </p>

@@ -20,7 +20,7 @@
                    <?= ($current_page ?? '') === 'kana-intro' ? 'class="active" aria-current="page"' : '' ?>>
                     Kana Introduction
                 </a>
-				<a href="<?= e($base_url) ?>page/kana/hiragana-chart.php"
+				<a href="<?= e($base_url) ?>page/kana/hiragana/hiragana-chart.php"
 					<?= ($current_page ?? '') === 'hiragana-chart' ? 'class="active" aria-current="page"' : '' ?>>
 					Hiragana Chart
 				</a>

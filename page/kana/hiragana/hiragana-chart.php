@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../../config.php';
+require_once __DIR__ . '/../../../config.php';
 
 $page_title       = "Hiragana Chart - Learn Japanese";
 $page_heading     = "HIRAGANA CHART";
@@ -7,8 +7,8 @@ $page_subtitle    = "Page for showing and explaining all 46 basic Hiragana (Goju
 $page_description = "The target for this page is for knowing the shape, pronunciation and memorizing 46 Hiragana and additional 25 (Dakuten & Handakuten).";
 $current_page     = "hiragana-chart";
 
-include __DIR__ . '/../../partials/head.php';
-include __DIR__ . '/../../partials/header.php';
+include __DIR__ . '/../../../partials/head.php';
+include __DIR__ . '/../../../partials/header.php';
 ?>
 
 <main>
