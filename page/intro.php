@@ -1,99 +1,63 @@
 <?php
 require_once __DIR__ . '/../config.php';
+
+$page_title       = "Introduction - Learn Japanese";
+$page_heading     = "INTRODUCTION";
+$page_subtitle    = "Why I started this journey";
+$page_description = "The story behind this Japanese learning project.";
+$current_page     = "intro";
+
+include __DIR__ . '/../partials/head.php';
+include __DIR__ . '/../partials/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction - Learn Japanese</title>
-    <link rel="stylesheet" href="<?php echo $base_url; ?>css/style.css">
-</head>
+<main>
+    <div class="content-stack">
+        <p>
+            Hello, I'm Bagus :D. This is how I'm improving my English,
+            learning Japanese, and coding — all at once. I'll document my
+            Japanese learning progress here, and I hope my dedication,
+            consistency, and motivation won't burn out easily.
+        </p>
+        <p>
+            The reason I'm making this project is because I want to learn
+            coding (for my career) and Japanese (because I'd like to build
+            a life in Japan someday — I'm not happy with how things are in
+            my country).
+        </p>
+        <p>
+            Here's the outline — I'll explain it piece by piece.
+        </p>
 
-<body>
-    <div class="card">
-        <header class="title">
-            <div class="title-text">
-                <h1>INTRODUCTION</h1>
-                <p class="subtitle">
-                    Why I started this journey
-                </p>
-            </div>
+        <h2 class="subsection-title">1. Learn Kana (Letters)</h2>
+        <p>
+            Why? Because I think it's counterproductive to learn a language
+            with a different writing system if you can't read it first.
+            So yes — Kana comes first.
+        </p>
 
-            <!-- Tombol Garis Tiga di Pojok Kanan Atas -->
-            <nav aria-label="Main navigation">
-                <details class="menu-container">
-                    <summary class="menu-toggle" title="Menu">
-                        <span>☰</span>
-                    </summary>
+        <h2 class="subsection-title">2. Memorize Kotoba (Vocabulary)</h2>
+        <p>
+            Based on my experience learning English, I find it much easier
+            if you already know or have memorized the vocabulary. So my
+            brain says: "Learn the characters first so you can read, then
+            memorize vocabulary (kotoba) so you know what the words mean
+            when you read them." That's my logic.
+        </p>
 
-                    <div class="dropdown-content">
-                        <a href="<?php echo $base_url; ?>index.php">
-                            Home
-                        </a>
-                        <a href="<?php echo $base_url; ?>page/intro.php">
-                            Introduction
-                        </a>
-
-                        <span class="nav-label">Kana Section</span>
-                        <div class="nav-group">
-                            <a href="<?php echo $base_url; ?>page/kana/intro-kana.php">
-                                Kana Introduction
-                            </a>
-                        </div>
-
-                        <span class="nav-label">Milestones</span>
-                        <div class="nav-group">
-                            <a href="<?php echo $base_url; ?>milestone/hiragana-m1.php">
-                                Milestone 1: Basic Hiragana
-                            </a>
-                        </div>
-                    </div>
-                </details>
-            </nav>
-        </header>
-
-        <div class="content-body">
-            <main>
-                <div style="display: flex; flex-direction: column; gap: 16px;">
-                    <p>
-                        Hello, i'm Bagus :D, this is how i improve english, learn japanese and coding all at once, i will document my Japanese learning progress, so i hope my dedication, consistency and motivation won't burn easily.
-                    </p>
-                    <p>
-                        Okay so, the reason i make this project is because i want to learn Coding (For my career) and Japanese (Because i want to live there, my country is bullshit).
-                    </p>
-                    <p>
-                        Here's the abstract, i'll explain it piece by piece.
-                    </p>
-
-                    <h2 style="font-size: 1.1rem; color: var(--text-primary); margin-top: 8px;">1. Learn Kana (Letters)</h2>
-                    <p>
-                        Why? Because i think it's stupid to learn language that have different letter if you didn't know how to read it, so yes, i would learn the Kana first.
-                    </p>
-
-                    <h2 style="font-size: 1.1rem; color: var(--text-primary); margin-top: 8px;">2. Memorizing Kotoba (Vocabulary)</h2>
-                    <p>
-                        Based on my experience (Learning English language), i find it easier if you already know or memorize their vocabulary, so my brains think "Bro, learn the letter first so you can read it, after that memorize the vocabulary or kotoba so you know what it means when you read it." That's my logic
-                    </p>
-
-                    <h2 style="font-size: 1.1rem; color: var(--text-primary); margin-top: 8px;">3. Learn Bunpo (Grammar)</h2>
-                    <p>
-                        When i first learn english, i'd REALLY REALLY FUCKKING HATE GRAMMAR because it's so confusing (i still hate it now) or my brain is just stupid to understand all of that... BUT, i don't want my grammar learning experience (The hate one) to affect my Japanese learning, so i would try (so hard, even if it cost me my sanity) to love Bunpo... And search an easiest study method to conquer it XD.
-                    </p>
-                    <p>
-                        That's it guys for the introduction, goodbye
-                    </p>
-                </div>
-            </main>
-
-            <footer>
-                <p>
-                    &copy; 2026 Learn Japanese. All rights reserved.
-                </p>
-            </footer>
-        </div>
+        <h2 class="subsection-title">3. Learn Bunpō (Grammar)</h2>
+        <p>
+            When I first learned English, I really, really hated grammar —
+            it was so confusing (and honestly, I still dislike it now), or
+            maybe my brain is just slow at understanding it. But I don't
+            want that hatred to affect my Japanese learning. So I'll try
+            (as hard as I can, even if it costs me my sanity) to love
+            Bunpō, and search for the easiest study method to conquer it XD.
+        </p>
+        <p>
+            That's it for the introduction — goodbye, everyone.
+        </p>
     </div>
-</body>
+</main>
 
-</html>
+<?php include __DIR__ . '/../partials/footer.php'; ?>

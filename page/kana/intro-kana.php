@@ -1,99 +1,81 @@
 <?php
 require_once __DIR__ . '/../../config.php';
+
+$page_title       = "Kana Introduction - Learn Japanese";
+$page_heading     = "KANA INTRODUCTION";
+$page_subtitle    = "The Three Japanese Writing Systems";
+$page_description = "An introduction to Hiragana, Katakana, Kanji, and Furigana.";
+$current_page     = "kana-intro";
+
+include __DIR__ . '/../../partials/head.php';
+include __DIR__ . '/../../partials/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kana Introduction - Learn Japanese</title>
-    <link rel="stylesheet" href="<?php echo $base_url; ?>css/style.css">
-</head>
+<main>
+    <div class="content-stack">
+        <p>
+            Haha, welcome everyone — Bagus still here. Based on my earlier
+            point that you need to learn the letters first so you can
+            read, I still believe that's step one. So let me introduce
+            you to...
+        </p>
 
-<body>
-    <div class="card">
-        <header class="title">
-            <div class="title-text">
-                <h1>KANA INTRODUCTION</h1>
-                <p class="subtitle">
-                    The 3 Types of Japanese Writing Systems
-                </p>
-            </div>
+        <h2 class="section-title">Japanese Writing Systems</h2>
+        <p>
+            Hip hip hooray XD — okay, back to the topic. Japanese uses
+            three main writing systems: <strong>Hiragana</strong>,
+            <strong>Katakana</strong>, and <strong>Kanji</strong>. Together,
+            Hiragana and Katakana are called <strong>Kana</strong>. There's
+            also <strong>Furigana</strong>, but that's not a separate
+            system — it's a reading aid placed above or beside kanji to
+            show pronunciation. I'll explain each one below.
+        </p>
 
-            <!-- Tombol Garis Tiga di Pojok Kanan Atas -->
-            <nav aria-label="Main navigation">
-                <details class="menu-container">
-                    <summary class="menu-toggle" title="Menu">
-                        <span>☰</span>
-                    </summary>
+        <h3 class="subsection-title">1. Hiragana</h3>
+        <p>
+            Let's start with Hiragana, the foundation of Japanese writing.
+            It's used for native Japanese words, grammatical particles,
+            okurigana (verb and adjective endings), and words that aren't
+            usually written in kanji. With its rounded strokes and flowing
+            curves, Hiragana is relatively easy to get used to. There are
+            46 basic Hiragana characters. Think that's a lot? Nah, bro.
+        </p>
 
-                    <div class="dropdown-content">
-                        <a href="<?php echo $base_url; ?>index.php">
-                            Home
-                        </a>
-                        <a href="<?php echo $base_url; ?>page/intro.php">
-                            Introduction
-                        </a>
+        <h3 class="subsection-title">2. Katakana</h3>
+        <p>
+            Please don't confuse Katakana with Katana (the Japanese sword)
+            — BUT the two do share a certain vibe. If Hiragana is rounded
+            and flowing, Katakana is all about SHARPNESS. It looks like
+            characters that could slash something. Katakana is mainly used
+            for loanwords, foreign names, onomatopoeia, and emphasis — it's
+            the writing system's way of integrating foreign vocabulary
+            while still respecting Japanese phonology.
+        </p>
 
-                        <span class="nav-label">Kana Section</span>
-                        <div class="nav-group">
-                            <a href="<?php echo $base_url; ?>page/kana/intro-kana.php">
-                                Kana Introduction
-                            </a>
-                        </div>
+        <h3 class="subsection-title">3. Kanji</h3>
+        <p>
+            I... don't have a lot of opinions about this one. Kanji
+            basically carries all the hard parts of Hiragana and Katakana
+            combined: rounded corners, sharp turns, and — how do I say
+            it? — a lot of strokes on paper. The reason is obvious: kanji
+            originally came from Chinese characters and were adapted for
+            Japanese. Their readings and usage follow Japanese conventions,
+            not Chinese.
+        </p>
 
-                        <span class="nav-label">Milestones</span>
-                        <div class="nav-group">
-                            <a href="<?php echo $base_url; ?>milestone/hiragana-m1.php">
-                                Milestone 1: Basic Hiragana
-                            </a>
-                        </div>
-                    </div>
-                </details>
-            </nav>
-        </header>
+        <h3 class="subsection-title">Bonus: Furigana</h3>
+        <p>
+            Furigana isn't a separate writing system — they're small kana
+            characters printed above or beside kanji to show how to
+            pronounce them. You'll see them a lot in manga, children's
+            books, and learning materials.
+        </p>
 
-        <div class="content-body">
-            <main>
-                <div style="display: flex; flex-direction: column; gap: 16px;">
-                    <p>
-                        Haha, welcome everyone, Bagus still here... Okay so, based on my opinion, where i said that you need to learn the letters first so you can read it... I still think that's the first step, so, let me introduce you all to...
-                    </p>
-
-                    <h2 style="font-size: 1.2rem; color: var(--text-primary); margin-top: 4px;">Japanese Letters</h2>
-                    <p>
-                        Hip hip hurray XD, okay back to the topic. Japanese has 3 type of letters, correct me if I'm wrong. The 3 type letters has their own function.. I'll explain it later, so here's the 3 type. First is Kana (Hiragana & Katakana), second is Kanji, and Furigana as a helper.
-                    </p>
-
-                    <h2 style="font-size: 1.1rem; color: var(--text-primary); margin-top: 8px;">1. Hiragana</h2>
-                    <p>
-                        Let's go to our first place, Hiragana, the basic of Japanese, it used by so many native japan words... with a lot of rounding and spinning pen move, Hiragana is still easy to get used to. there's 46 basic Hiragana letters. You think that's a lot? Nah bro.
-                    </p>
-
-                    <h2 style="font-size: 1.1rem; color: var(--text-primary); margin-top: 8px;">2. Katakana</h2>
-                    <p>
-                        Please don't confuse Katakana with Katana (Japanese Sword), BUT!! The two of them has similarity... If Hiragana is rounded and spin spin, then Katakana is all about SHARPNESS... How sharp your character, so it could slash something, kidding. Katakana is used for foreign word, or you could say loanword, foreign name, etc... Could i say it's a bit racist they make up new letters for us foreigners or they value us? Idk what i'm talking about...
-                    </p>
-
-                    <h2 style="font-size: 1.1rem; color: var(--text-primary); margin-top: 8px;">3. Kanji</h2>
-                    <p>
-                        I... I don't have a lot opinion about this... It's just, Kanji has all of the hard part about Hiragana and Katakana... It has a lot of rounding corner, sharp turn and it's very... how do I say it? It has a lot of scratch on the paper. The reason is obvious, because it's originally form chinese letters, used for Japanese word.
-                    </p>
-
-                    <p style="margin-top: 8px;">
-                        That's it for introduction... I'll explain about Hiragana first in another page.
-                    </p>
-                </div>
-            </main>
-
-            <footer>
-                <p>
-                    &copy; 2026 Learn Japanese. All rights reserved.
-                </p>
-            </footer>
-        </div>
+        <p class="spaced">
+            That's it for the introduction. I'll explain Hiragana in
+            more detail on another page.
+        </p>
     </div>
-</body>
+</main>
 
-</html>
+<?php include __DIR__ . '/../../partials/footer.php'; ?>
