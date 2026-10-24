@@ -30,7 +30,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start; /* fix: halaman panjang tidak terpotong */
+	align-items: flex-start;
 	padding: 20px;
 	line-height: 1.6;
 }
@@ -62,7 +62,7 @@ body {
 }
 
 .title-text {
-	min-width: 0; /* cegah h1 panjang menekan tombol menu */
+	min-width: 0;
 	flex: 1;
 }
 
@@ -184,36 +184,30 @@ main p {
 }
 
 /* ============================================================
-   Utility Classes (menggantikan inline style)
+   Utility Classes
    ============================================================ */
-
-/* Container vertikal dengan jarak antar paragraf */
 .content-stack {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
 }
 
-/* Heading level 2 di dalam konten */
 .section-title {
 	font-size: 1.2rem;
 	color: var(--text-primary);
 	margin-top: 4px;
 }
 
-/* Heading level 3 di dalam konten */
 .subsection-title {
 	font-size: 1.1rem;
 	color: var(--text-primary);
 	margin-top: 8px;
 }
 
-/* Paragraf dengan jarak atas ekstra */
 .spaced {
 	margin-top: 8px;
 }
 
-/* List jadwal (Day 1, Day 2, dst.) */
 .schedule {
 	list-style: none;
 	padding-left: 0;
@@ -225,6 +219,79 @@ main p {
 
 .schedule strong {
 	color: var(--text-primary);
+}
+
+/* ============================================================
+   Kana chart
+   ============================================================ */
+.kana-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 1rem;
+}
+
+.kana-table caption {
+	caption-side: top;
+	text-align: left;
+	font-size: 0.85rem;
+	color: var(--text-secondary);
+	padding-bottom: 8px;
+}
+
+.kana-table th,
+.kana-table td {
+	border: 1px solid var(--border-color);
+	padding: 8px 4px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.kana-table thead th,
+.kana-table tbody th,
+.kana-table tfoot th {
+	background-color: rgba(255, 255, 255, 0.03);
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: var(--text-secondary);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.kana-table tbody th,
+.kana-table tfoot th {
+	width: 40px;
+}
+
+.kana-table td {
+	padding: 10px 4px;
+}
+
+.kana-table .kana {
+	display: block;
+	font-size: 1.75rem;
+	color: var(--text-primary);
+	line-height: 1.2;
+}
+
+.kana-table .romaji {
+	display: block;
+	font-size: 0.7rem;
+	color: var(--text-secondary);
+	margin-top: 2px;
+}
+
+.kana-table .empty {
+	color: var(--border-color);
+	font-size: 1.1rem;
+}
+
+.kana-table .standalone .kana {
+	display: inline;
+	margin-right: 6px;
+}
+
+.kana-table .standalone .romaji {
+	display: inline;
 }
 
 /* ============================================================
@@ -264,5 +331,23 @@ summary:focus-visible {
 
 	.title-text h1 {
 		font-size: 1.4rem;
+	}
+
+	.kana-table .kana {
+		font-size: 1.4rem;
+	}
+
+	.kana-table .romaji {
+		font-size: 0.65rem;
+	}
+
+	.kana-table td {
+		padding: 6px 2px;
+	}
+
+	.kana-table thead th,
+	.kana-table tbody th,
+	.kana-table tfoot th {
+		font-size: 0.7rem;
 	}
 }

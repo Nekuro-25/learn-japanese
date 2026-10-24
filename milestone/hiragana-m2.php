@@ -45,6 +45,12 @@ include __DIR__ . '/../partials/header.php';
         <p class="spaced">
             Okay, that's it for the second milestone — goodbye.
         </p>
+        <p>
+            Practice with the
+            <a href="<?= e($base_url) ?>page/kana/hiragana-chart.php">
+                Hiragana chart →
+            </a>
+        </p>
     </div>
 </main>
 

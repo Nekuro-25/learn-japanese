@@ -49,13 +49,13 @@ Target berikutnya, dikerjakan berurutan.
 
 ### 1. Halaman Chart Hiragana
 
-- [ ] Buat `page/kana/hiragana-chart.php`.
-- [ ] Tampilkan 46 huruf dasar dalam grid (5 kolom × ~10 baris untuk gojūon).
-- [ ] Setiap sel: huruf besar, romaji, cara baca.
-- [ ] Tambahkan **dakuten/handakuten** chart (25 huruf) di section terpisah.
-- [ ] CSS: grid responsif, kartu huruf yang bisa dipindai cepat.
-- [ ] Tambah link di `partials/nav.php` (section "Kana Section").
-- [ ] Tautkan dari `intro-kana.php` ("lihat chart lengkap →").
+- [x] Buat `page/kana/hiragana-chart.php`.
+- [x] Tampilkan 46 huruf dasar dalam grid (5 kolom × ~10 baris untuk gojūon).
+- [x] Setiap sel: huruf besar, romaji, cara baca.
+- [x] Tambahkan **dakuten/handakuten** chart (25 huruf) di section terpisah.
+- [x] CSS: grid responsif, kartu huruf yang bisa dipindai cepat.
+- [x] Tambah link di `partials/nav.php` (section "Kana Section").
+- [x] Tautkan dari `intro-kana.php` ("lihat chart lengkap →").
 
 **Kenapa ini duluan:** konten ini paling sering dibuka saat belajar, dan
 jadi fondasi untuk kuis Hiragana nanti.

@@ -14,6 +14,7 @@ progress while improving my English writing and PHP/CSS coding skills.
 - Home page with project overview.
 - Introduction page explaining the learning approach.
 - Kana introduction covering Hiragana, Katakana, Kanji, and Furigana.
+- Hiragana chart — 46 basic kana + 25 dakuten/handakuten (semantic table).
 - Milestone 1: 46 basic Hiragana in 1 week.
 - Milestone 2: 25 dakuten/handakuten characters in 3 days.
 - Dark, responsive card-based layout.
@@ -22,8 +23,8 @@ progress while improving my English writing and PHP/CSS coding skills.
 
 ## Planned Features
 
-- Hiragana and Katakana charts with reading exercises.
-- Kana recognition quizzes (JavaScript).
+- Katakana chart (mirror of the Hiragana chart).
+- Kana recognition quiz (JavaScript).
 - Vocabulary and grammar notes.
 - Progress tracking (only if there's a real need).
 
