@@ -3,15 +3,47 @@ require_once __DIR__ . '/../../../config.php';
 
 $page_title       = "Hiragana Chart - Learn Japanese";
 $page_heading     = "HIRAGANA CHART";
-$page_subtitle    = "Page for showing and explaining all 46 basic Hiragana (Gojuon) and additional 25 (Dakuten & Handakuten)";
-$page_description = "The target for this page is for knowing the shape, pronunciation and memorizing 46 Hiragana and additional 25 (Dakuten & Handakuten).";
+$page_subtitle    = "Page for showing and explaining all 46 basic Hiragana (Gojuon), 25 (Dakuten & Handakuten), and 33 youon combinations";
+$page_description = "The target for this page is for knowing the shape, pronunciation, and memorizing 46 Hiragana, 25 (Dakuten & Handakuten), and 33 youon combinations.";
 $current_page     = "hiragana-chart";
+
+$kana = require __DIR__ . '/../../../data/kana.php';
+
+$vowels = ['a', 'i', 'u', 'e', 'o'];
+$youon_vowels = ['a', 'u', 'o'];
+
+$grouped = ['gojuon' => [], 'dakuten' => [], 'handakuten' => []];
+$standalone = [];
+
+foreach ($kana as [$symbol, $romaji, $category, $row, $vowel]) {
+	if ($vowel === '') {
+		$standalone[] = ['symbol' => $symbol, 'romaji' => $romaji];
+		continue;
+	}
+	$grouped[$category][$row][$vowel] = ['symbol' => $symbol, 'romaji' => $romaji];
+}
+
+// Youon — 11 rows × 3 vowels (a, u, o). No i/e forms.
+$youon = [
+	'き' => ['a' => ['きゃ', 'kya'], 'u' => ['きゅ', 'kyu'], 'o' => ['きょ', 'kyo']],
+	'し' => ['a' => ['しゃ', 'sha'], 'u' => ['しゅ', 'shu'], 'o' => ['しょ', 'sho']],
+	'ち' => ['a' => ['ちゃ', 'cha'], 'u' => ['ちゅ', 'chu'], 'o' => ['ちょ', 'cho']],
+	'に' => ['a' => ['にゃ', 'nya'], 'u' => ['にゅ', 'nyu'], 'o' => ['にょ', 'nyo']],
+	'ひ' => ['a' => ['ひゃ', 'hya'], 'u' => ['ひゅ', 'hyu'], 'o' => ['ひょ', 'hyo']],
+	'み' => ['a' => ['みゃ', 'mya'], 'u' => ['みゅ', 'myu'], 'o' => ['みょ', 'myo']],
+	'り' => ['a' => ['りゃ', 'rya'], 'u' => ['りゅ', 'ryu'], 'o' => ['りょ', 'ryo']],
+	'ぎ' => ['a' => ['ぎゃ', 'gya'], 'u' => ['ぎゅ', 'gyu'], 'o' => ['ぎょ', 'gyo']],
+	'じ' => ['a' => ['じゃ', 'ja'],  'u' => ['じゅ', 'ju'],  'o' => ['じょ', 'jo']],
+	'び' => ['a' => ['びゃ', 'bya'], 'u' => ['びゅ', 'byu'], 'o' => ['びょ', 'byo']],
+	'ぴ' => ['a' => ['ぴゃ', 'pya'], 'u' => ['ぴゅ', 'pyu'], 'o' => ['ぴょ', 'pyo']],
+];
 
 include __DIR__ . '/../../../partials/head.php';
 include __DIR__ . '/../../../partials/header.php';
+include __DIR__ . '/../../../partials/breadcrumb.php';
 ?>
 
-<main>
+<main id="main" tabindex="-1">
 	<div class="content-stack">
 		<p>So, I'll go straight to the point.</p>
 
@@ -23,118 +55,45 @@ include __DIR__ . '/../../../partials/header.php';
 		</p>
 
 		<table class="kana-table">
-			<caption>46 basic hiragana · Hepburn romaji</caption>
+			<caption>46 basic hiragana · Hepburn romaji · Columns are vowels, rows are consonants</caption>
 			<thead>
 				<tr>
-					<th scope="col">∅</th>
-					<th scope="col">a</th>
-					<th scope="col">i</th>
-					<th scope="col">u</th>
-					<th scope="col">e</th>
-					<th scope="col">o</th>
+					<th scope="col" aria-label="No consonant">—</th>
+					<?php foreach ($vowels as $v): ?>
+						<th scope="col"><?= e($v) ?></th>
+					<?php endforeach; ?>
 				</tr>
 			</thead>
 			<tbody>
-				<!-- Vowels -->
-				<tr>
-					<th scope="row">∅</th>
-					<td><span class="kana" lang="ja">あ</span><span class="romaji">a</span></td>
-					<td><span class="kana" lang="ja">い</span><span class="romaji">i</span></td>
-					<td><span class="kana" lang="ja">う</span><span class="romaji">u</span></td>
-					<td><span class="kana" lang="ja">え</span><span class="romaji">e</span></td>
-					<td><span class="kana" lang="ja">お</span><span class="romaji">o</span></td>
-				</tr>
-				<!-- K -->
-				<tr>
-					<th scope="row">k</th>
-					<td><span class="kana" lang="ja">か</span><span class="romaji">ka</span></td>
-					<td><span class="kana" lang="ja">き</span><span class="romaji">ki</span></td>
-					<td><span class="kana" lang="ja">く</span><span class="romaji">ku</span></td>
-					<td><span class="kana" lang="ja">け</span><span class="romaji">ke</span></td>
-					<td><span class="kana" lang="ja">こ</span><span class="romaji">ko</span></td>
-				</tr>
-				<!-- S -->
-				<tr>
-					<th scope="row">s</th>
-					<td><span class="kana" lang="ja">さ</span><span class="romaji">sa</span></td>
-					<td><span class="kana" lang="ja">し</span><span class="romaji">shi</span></td>
-					<td><span class="kana" lang="ja">す</span><span class="romaji">su</span></td>
-					<td><span class="kana" lang="ja">せ</span><span class="romaji">se</span></td>
-					<td><span class="kana" lang="ja">そ</span><span class="romaji">so</span></td>
-				</tr>
-				<!-- T -->
-				<tr>
-					<th scope="row">t</th>
-					<td><span class="kana" lang="ja">た</span><span class="romaji">ta</span></td>
-					<td><span class="kana" lang="ja">ち</span><span class="romaji">chi</span></td>
-					<td><span class="kana" lang="ja">つ</span><span class="romaji">tsu</span></td>
-					<td><span class="kana" lang="ja">て</span><span class="romaji">te</span></td>
-					<td><span class="kana" lang="ja">と</span><span class="romaji">to</span></td>
-				</tr>
-				<!-- N -->
-				<tr>
-					<th scope="row">n</th>
-					<td><span class="kana" lang="ja">な</span><span class="romaji">na</span></td>
-					<td><span class="kana" lang="ja">に</span><span class="romaji">ni</span></td>
-					<td><span class="kana" lang="ja">ぬ</span><span class="romaji">nu</span></td>
-					<td><span class="kana" lang="ja">ね</span><span class="romaji">ne</span></td>
-					<td><span class="kana" lang="ja">の</span><span class="romaji">no</span></td>
-				</tr>
-				<!-- H -->
-				<tr>
-					<th scope="row">h</th>
-					<td><span class="kana" lang="ja">は</span><span class="romaji">ha</span></td>
-					<td><span class="kana" lang="ja">ひ</span><span class="romaji">hi</span></td>
-					<td><span class="kana" lang="ja">ふ</span><span class="romaji">fu</span></td>
-					<td><span class="kana" lang="ja">へ</span><span class="romaji">he</span></td>
-					<td><span class="kana" lang="ja">ほ</span><span class="romaji">ho</span></td>
-				</tr>
-				<!-- M -->
-				<tr>
-					<th scope="row">m</th>
-					<td><span class="kana" lang="ja">ま</span><span class="romaji">ma</span></td>
-					<td><span class="kana" lang="ja">み</span><span class="romaji">mi</span></td>
-					<td><span class="kana" lang="ja">む</span><span class="romaji">mu</span></td>
-					<td><span class="kana" lang="ja">め</span><span class="romaji">me</span></td>
-					<td><span class="kana" lang="ja">も</span><span class="romaji">mo</span></td>
-				</tr>
-				<!-- Y (3 real + 2 empty) -->
-				<tr>
-					<th scope="row">y</th>
-					<td><span class="kana" lang="ja">や</span><span class="romaji">ya</span></td>
-					<td class="empty">—</td>
-					<td><span class="kana" lang="ja">ゆ</span><span class="romaji">yu</span></td>
-					<td class="empty">—</td>
-					<td><span class="kana" lang="ja">よ</span><span class="romaji">yo</span></td>
-				</tr>
-				<!-- R -->
-				<tr>
-					<th scope="row">r</th>
-					<td><span class="kana" lang="ja">ら</span><span class="romaji">ra</span></td>
-					<td><span class="kana" lang="ja">り</span><span class="romaji">ri</span></td>
-					<td><span class="kana" lang="ja">る</span><span class="romaji">ru</span></td>
-					<td><span class="kana" lang="ja">れ</span><span class="romaji">re</span></td>
-					<td><span class="kana" lang="ja">ろ</span><span class="romaji">ro</span></td>
-				</tr>
-				<!-- W (2 real + 3 empty) -->
-				<tr>
-					<th scope="row">w</th>
-					<td><span class="kana" lang="ja">わ</span><span class="romaji">wa</span></td>
-					<td class="empty">—</td>
-					<td class="empty">—</td>
-					<td class="empty">—</td>
-					<td><span class="kana" lang="ja">を</span><span class="romaji">o (wo)</span></td>
-				</tr>
+				<?php foreach ($grouped['gojuon'] as $rowLetter => $row): ?>
+					<tr>
+						<th scope="row"><?= e($rowLetter) ?></th>
+						<?php foreach ($vowels as $v): ?>
+							<td>
+								<?php if (isset($row[$v])): ?>
+									<span class="kana" lang="ja"><?= e($row[$v]['symbol']) ?></span>
+									<span class="romaji"><?= e($row[$v]['romaji']) ?></span>
+								<?php else: ?>
+									<span class="empty">—</span>
+								<?php endif; ?>
+							</td>
+						<?php endforeach; ?>
+					</tr>
+				<?php endforeach; ?>
 			</tbody>
-			<tfoot>
-				<tr>
-					<th scope="row">n</th>
-					<td colspan="5" class="standalone">
-						<span class="kana" lang="ja">ん</span>
-						<span class="romaji">n</span>
-					</td>
-				</tr>
-			</tfoot>
+			<?php if (!empty($standalone)): ?>
+				<tbody class="standalone-group">
+					<?php foreach ($standalone as $item): ?>
+						<tr>
+							<th scope="row">n</th>
+							<td colspan="5" class="standalone">
+								<span class="kana" lang="ja"><?= e($item['symbol']) ?></span>
+								<span class="romaji"><?= e($item['romaji']) ?></span>
+							</td>
+						</tr>
+					<?php endforeach; ?>
+				</tbody>
+			<?php endif; ?>
 		</table>
 
 		<h2 class="section-title">Dakuten &amp; Handakuten — 25 Additional</h2>
@@ -149,65 +108,79 @@ include __DIR__ . '/../../../partials/header.php';
 			<caption>25 additional hiragana · Hepburn romaji</caption>
 			<thead>
 				<tr>
-					<th scope="col">∅</th>
-					<th scope="col">a</th>
-					<th scope="col">i</th>
-					<th scope="col">u</th>
-					<th scope="col">e</th>
-					<th scope="col">o</th>
+					<th scope="col" aria-label="No consonant">—</th>
+					<?php foreach ($vowels as $v): ?>
+						<th scope="col"><?= e($v) ?></th>
+					<?php endforeach; ?>
 				</tr>
 			</thead>
 			<tbody>
-				<!-- G (dakuten) -->
-				<tr>
-					<th scope="row">g</th>
-					<td><span class="kana" lang="ja">が</span><span class="romaji">ga</span></td>
-					<td><span class="kana" lang="ja">ぎ</span><span class="romaji">gi</span></td>
-					<td><span class="kana" lang="ja">ぐ</span><span class="romaji">gu</span></td>
-					<td><span class="kana" lang="ja">げ</span><span class="romaji">ge</span></td>
-					<td><span class="kana" lang="ja">ご</span><span class="romaji">go</span></td>
-				</tr>
-				<!-- Z (dakuten) -->
-				<tr>
-					<th scope="row">z</th>
-					<td><span class="kana" lang="ja">ざ</span><span class="romaji">za</span></td>
-					<td><span class="kana" lang="ja">じ</span><span class="romaji">ji</span></td>
-					<td><span class="kana" lang="ja">ず</span><span class="romaji">zu</span></td>
-					<td><span class="kana" lang="ja">ぜ</span><span class="romaji">ze</span></td>
-					<td><span class="kana" lang="ja">ぞ</span><span class="romaji">zo</span></td>
-				</tr>
-				<!-- D (dakuten) -->
-				<tr>
-					<th scope="row">d</th>
-					<td><span class="kana" lang="ja">だ</span><span class="romaji">da</span></td>
-					<td><span class="kana" lang="ja">ぢ</span><span class="romaji">ji</span></td>
-					<td><span class="kana" lang="ja">づ</span><span class="romaji">zu</span></td>
-					<td><span class="kana" lang="ja">で</span><span class="romaji">de</span></td>
-					<td><span class="kana" lang="ja">ど</span><span class="romaji">do</span></td>
-				</tr>
-				<!-- B (dakuten) -->
-				<tr>
-					<th scope="row">b</th>
-					<td><span class="kana" lang="ja">ば</span><span class="romaji">ba</span></td>
-					<td><span class="kana" lang="ja">び</span><span class="romaji">bi</span></td>
-					<td><span class="kana" lang="ja">ぶ</span><span class="romaji">bu</span></td>
-					<td><span class="kana" lang="ja">べ</span><span class="romaji">be</span></td>
-					<td><span class="kana" lang="ja">ぼ</span><span class="romaji">bo</span></td>
-				</tr>
-				<!-- P (handakuten) -->
-				<tr>
-					<th scope="row">p</th>
-					<td><span class="kana" lang="ja">ぱ</span><span class="romaji">pa</span></td>
-					<td><span class="kana" lang="ja">ぴ</span><span class="romaji">pi</span></td>
-					<td><span class="kana" lang="ja">ぷ</span><span class="romaji">pu</span></td>
-					<td><span class="kana" lang="ja">ぺ</span><span class="romaji">pe</span></td>
-					<td><span class="kana" lang="ja">ぽ</span><span class="romaji">po</span></td>
-				</tr>
+				<?php foreach (['dakuten', 'handakuten'] as $cat): ?>
+					<?php foreach ($grouped[$cat] as $rowLetter => $row): ?>
+						<tr>
+							<th scope="row"><?= e($rowLetter) ?></th>
+							<?php foreach ($vowels as $v): ?>
+								<td>
+									<?php if (isset($row[$v])): ?>
+										<span class="kana" lang="ja"><?= e($row[$v]['symbol']) ?></span>
+										<span class="romaji"><?= e($row[$v]['romaji']) ?></span>
+									<?php else: ?>
+										<span class="empty">—</span>
+									<?php endif; ?>
+								</td>
+							<?php endforeach; ?>
+						</tr>
+					<?php endforeach; ?>
+				<?php endforeach; ?>
 			</tbody>
 		</table>
 
+		<h2 class="section-title" id="youon">Youon — Combination Kana</h2>
+		<p>
+			<strong>Youon</strong> combines a kana from the
+			<span lang="ja">い</span>-row with a <strong>small</strong>
+			<span lang="ja">ゃ</span>, <span lang="ja">ゅ</span>, or
+			<span lang="ja">ょ</span> to make one combined sound. There is no
+			<em>i</em> or <em>e</em> form — only <em>a</em>, <em>u</em>, and
+			<em>o</em>.
+		</p>
+
+		<table class="kana-table">
+			<caption>33 youon combinations (11 base kana × 3 vowels) · Hepburn romaji</caption>
+			<thead>
+				<tr>
+					<th scope="col" aria-label="Base kana">—</th>
+					<?php foreach ($youon_vowels as $v): ?>
+						<th scope="col"><?= e($v) ?></th>
+					<?php endforeach; ?>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($youon as $base => $row): ?>
+					<tr>
+						<th scope="row" lang="ja"><?= e($base) ?></th>
+						<?php foreach ($youon_vowels as $v): ?>
+							<td>
+								<?php if (isset($row[$v])): ?>
+									<span class="kana" lang="ja"><?= e($row[$v][0]) ?></span>
+									<span class="romaji"><?= e($row[$v][1]) ?></span>
+								<?php else: ?>
+									<span class="empty">—</span>
+								<?php endif; ?>
+							</td>
+						<?php endforeach; ?>
+					</tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
+
+		<p>
+			For the full explanation and practice, see
+			<a href="<?= e($base_url) ?>milestone/hiragana-m3.php">Milestone 3 — Advanced Hiragana →</a>.
+		</p>
+
 		<h2 class="section-title">Notes</h2>
-		<ul class="schedule">
+		<ul class="list-clean">
 			<li><strong>し</strong> is <em>shi</em>, not "si".</li>
 			<li><strong>ち</strong> is <em>chi</em>, not "ti".</li>
 			<li><strong>つ</strong> is <em>tsu</em>, not "tu".</li>
@@ -216,7 +189,9 @@ include __DIR__ . '/../../../partials/header.php';
 			<li><strong>ん</strong> is a standalone nasal consonant — it never begins a word.</li>
 			<li><strong>ぢ</strong> and <strong>づ</strong> have the same sound as じ and ず in modern Japanese.</li>
 		</ul>
+
+		<?php include __DIR__ . '/../../../partials/back-link.php'; ?>
 	</div>
 </main>
 
-<?php include __DIR__ . '/../../partials/footer.php'; ?>
+<?php include __DIR__ . '/../../../partials/footer.php'; ?>

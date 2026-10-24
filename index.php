@@ -11,12 +11,14 @@ include __DIR__ . '/partials/head.php';
 include __DIR__ . '/partials/header.php';
 ?>
 
-<main>
-    <p>
-        A personal project where I document my Japanese
-        learning journey while improving my English
-        and coding skills.
-    </p>
+<main id="main" tabindex="-1">
+	<div class="content-stack">
+		<p>
+			A personal project where I document my Japanese
+			learning journey while improving my English
+			and coding skills.
+		</p>
+	</div>
 </main>
 
 <?php include __DIR__ . '/partials/footer.php'; ?>

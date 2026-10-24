@@ -1,157 +1,166 @@
 # Learn Japanese — Development TODO
 
-## ✅ Completed (Refactor Phase)
+## ✅ Completed
 
 ### Infrastructure
 
 - [x] Struktur folder konsisten (`page/`, `milestone/`, `css/`, `partials/`).
 - [x] Ekstrak layout ke `partials/` (head, nav, header, footer).
-- [x] `config.php` menyimpan `$base_url`, `$site_name`, dan helper `e()`.
-- [x] Nav dipisah ke `partials/nav.php` (single source of truth).
+- [x] `config.php` menyimpan `$base_url`, `$site_name`, `e()`.
+- [x] `$page_hierarchy` + `build_breadcrumbs()` di `config.php`.
+- [x] Nav dipisah ke `partials/nav.php`.
 - [x] Active state di menu via `$current_page`.
-- [x] Tahun footer otomatis (`date('Y')`).
+- [x] Tahun footer otomatis.
 
 ### Bugs Fixed
 
-- [x] Milestone 2 tidak lagi orphan — sekarang muncul di menu.
-- [x] Typo `menu-container` → `corner` di halaman Milestone 2.
-- [x] `require_once` tanpa `;` di `hiragana-m2.php` sudah diperbaiki.
-- [x] Copy-paste "second milestone" di Milestone 2 → "next milestone".
+- [x] Milestone 2 tidak lagi orphan.
+- [x] Typo `menu-container` → `corner` di M2.
+- [x] `require_once` tanpa `;` di `hiragana-m2.php`.
+- [x] Copy-paste "second milestone" di M2.
+- [x] Footer path di `hiragana-chart.php` (3 level).
+- [x] Milestone 3 tidak lagi orphan — sudah di nav.
 
 ### CSS / UI
 
-- [x] `body` pakai `align-items: flex-start` (halaman panjang tidak terpotong).
-- [x] `.title-text` pakai `min-width: 0` (judul panjang tidak menekan tombol menu).
-- [x] Utility classes menggantikan inline `style="..."`.
-- [x] `<br>` untuk list jadwal diganti `<ul class="schedule">`.
+- [x] `body` pakai `align-items: flex-start`.
+- [x] `.title-text` pakai `min-width: 0`.
+- [x] Utility classes menggantikan inline style.
+- [x] `<br>` jadwal diganti list utility.
 - [x] Responsive breakpoint 600px.
-- [x] `:focus-visible` untuk aksesibilitas keyboard.
+- [x] `:focus-visible`.
+- [x] CSS `.kana-table` untuk chart.
+- [x] CSS breadcrumb + back-link.
+- [x] `.schedule` → `.list-clean` (rename semantik).
+- [x] `details[open]` visual state untuk menu toggle.
+- [x] Skip-link CSS.
+- [x] Hapus CSS dead-code `tfoot` selectors.
 
 ### Content & Writing
 
-- [x] Konten `intro-kana.php` diperbaiki: 3 sistem = Hiragana, Katakana, Kanji.
-- [x] "Kana" dijelaskan sebagai payung Hiragana + Katakana.
-- [x] "Furigana" dijelaskan sebagai alat bantu baca, bukan sistem.
-- [x] Fungsi Hiragana & Katakana dijelaskan lebih akurat.
-- [x] Kapitalisasi "I", grammar dasar, ejaan diperbaiki.
+- [x] Konten `intro-kana.php` diperbaiki (3 sistem = Hiragana, Katakana, Kanji).
+- [x] "Kana" dijelaskan sebagai payung.
+- [x] "Furigana" dijelaskan sebagai alat bantu baca.
+- [x] Fungsi Hiragana & Katakana lebih akurat.
+- [x] Kapitalisasi "I", grammar dasar, ejaan.
 - [x] Profanity dihapus dari halaman edukasi.
+- [x] Typo `pronounciation` → `pronunciation` di chart.
+- [x] Milestone 3 content diisi: Youon, Sokuon, Chouon, Hatsuon, + Quick Self-Test.
+- [x] Semua kana di M3 pakai `lang="ja"` (aksesibilitas screen reader).
+
+### Hiragana Chart
+
+- [x] Buat `page/kana/hiragana/hiragana-chart.php`.
+- [x] 46 huruf dasar + 25 dakuten/handakuten.
+- [x] Setiap sel: huruf besar, romaji.
+- [x] CSS tabel responsif.
+- [x] Link di `partials/nav.php`.
+- [x] Tautkan dari `intro-kana.php`.
+- [x] `<tfoot>` ん → `<tbody class="standalone-group">` (semantik).
+- [x] `$standalone` → array (siap multi-entry).
+- [x] Header `∅` → `—` + `aria-label="No consonant"`.
+- [x] Youon reference grid (11 base × 3 vowels = 33 combinations).
+- [x] Cross-link chart ↔ Milestone 3 (`#youon` deep link).
+
+### Navigasi Internal
+
+- [x] Breadcrumb + back link di semua halaman (via `$page_hierarchy`).
+- [x] M1 → M2.
+- [x] M2 → M3.
+- [x] Link chart di akhir M2.
+- [x] Link chart di akhir `intro-kana.php`.
+
+### Accessibility
+
+- [x] Skip-to-content link di semua halaman.
+- [x] `<main id="main" tabindex="-1">` di semua halaman.
+- [x] `aria-label` summary → "Navigation menu".
+- [x] `aria-label="No consonant"` di header chart.
+- [x] `lang="ja"` pada semua kana di M3.
+- [x] `head.php` fallback `$page_title ?? $site_name`.
+- [x] `build_breadcrumbs()` empty-trail guard.
+- [x] Favicon inline SVG.
 
 ### Documentation
 
-- [x] `README.md` lengkap (fitur, cara run, struktur, tech stack, design decisions).
-- [x] `todo.md` disinkronkan dengan realita.
+- [x] `learning-log.md` dengan format mingguan.
+- [x] `README.md` lengkap.
+- [x] `todo.md` disinkronkan.
+- [x] `.gitignore` dibersihkan (hapus `config.local.php` mati).
 
 ---
 
 ## 🎯 Next Up — Priority High
 
-Target berikutnya, dikerjakan berurutan.
+### 1. Isi `learning-log.md` mingguan
 
-### 1. Halaman Chart Hiragana
-
-- [x] Buat `page/kana/hiragana-chart.php`.
-- [x] Tampilkan 46 huruf dasar dalam grid (5 kolom × ~10 baris untuk gojūon).
-- [x] Setiap sel: huruf besar, romaji, cara baca.
-- [x] Tambahkan **dakuten/handakuten** chart (25 huruf) di section terpisah.
-- [x] CSS: grid responsif, kartu huruf yang bisa dipindai cepat.
-- [x] Tambah link di `partials/nav.php` (section "Kana Section").
-- [x] Tautkan dari `intro-kana.php` ("lihat chart lengkap →").
-
-**Kenapa ini duluan:** konten ini paling sering dibuka saat belajar, dan
-jadi fondasi untuk kuis Hiragana nanti.
-
-### 2. Navigasi Internal yang Lebih Baik
-
-- [ ] Tambahkan breadcrumb atau tombol "back" di setiap halaman materi.
-- [ ] Di akhir setiap Milestone, tambahkan link ke Milestone berikutnya:
-  - M1 → M2
-  - M2 → (nanti) M3
-- [ ] Link "Lihat chart" muncul di akhir `intro-kana.php`.
-
-**Kenapa penting:** user saat ini harus buka menu untuk pindah halaman.
-Alur belajar jadi terputus.
-
-### 3. Lengkapi Learning Log
-
-- [ ] Buat `LEARNING_LOG.md` di root.
-- [ ] Format per minggu: huruf yang sudah dikuasai, yang masih goyah,
-      catatan (misal "し vs ち sering ketukar"), target minggu depan.
-- [ ] Update setiap akhir minggu — ini tujuan utama proyek, bukan kode.
-
-**Kenapa penting:** proyek ini learning journal, bukan technical blog.
-Tanpa learning log, "journal"-nya hanya soal kode.
+- [ ] Update setiap akhir minggu — ini tujuan utama proyek.
+- [ ] Catat huruf yang masih goyah + target minggu depan.
 
 ---
 
 ## 🔮 Planned — Priority Medium
 
-Dikerjakan setelah Priority High selesai.
+### 2. Halaman Chart Katakana
 
-### 4. Halaman Chart Katakana
+- [ ] **Keputusan data structure:** file baru `data/katakana.php` (rekomendasi) — biar `hiragana-chart.php` dan `katakana-chart.php` independen.
+- [ ] Buat `data/katakana.php` dengan 46 gojūon + 25 dakuten/handakuten (mirror dari `data/kana.php`).
+- [ ] Buat `page/kana/katakana/katakana-chart.php` — copy `hiragana-chart.php`, ganti `require` data ke `data/katakana.php`.
+- [ ] Tambah entry di `$page_hierarchy` (parent: `kana-intro`, section: `Kana Section`, order: 12).
+- [ ] Opsional: rename `data/kana.php` → `data/hiragana.php` untuk konsistensi.
+- [ ] Tabel konversi Hiragana ↔ Katakana (nice-to-have).
 
-- [ ] `page/kana/katakana-chart.php` — mirror dari Hiragana chart.
-- [ ] Tabel konversi Hiragana ↔ Katakana untuk huruf yang sama bunyinya.
-- [ ] Tambahkan link dari nav.
+### 3. Kuis Hiragana (JavaScript pertama)
 
-### 5. Kuis Hiragana (JavaScript pertama)
+- [ ] Buat folder `js/`.
+- [ ] `js/quiz.js` — vanilla JS, reuse `data/kana.php` via JSON endpoint atau inline `<script>`.
+- [ ] `page/kana/hiragana/hiragana-quiz.php` — 10 soal per sesi, tampilkan skor.
+- [ ] Update README: "Quiz page requires JavaScript" (pengecualian prinsip no-JS).
+- [ ] Data romaji sudah bersih (を = `'o'`), siap dipakai quiz.
 
-- [ ] Halaman `page/kana/hiragana-quiz.php`.
-- [ ] Tampilkan satu huruf acak → user pilih romaji (atau sebaliknya).
-- [ ] Skor + feedback langsung (benar/salah).
-- [ ] 10 soal per sesi, lalu tampilkan hasil.
-- [ ] Mulai dengan vanilla JS saja — file `js/quiz.js`.
-- [ ] Tidak ada penyimpanan permanen dulu.
+### 4. Materi Kotoba Awal
 
-### 6. Materi Kotoba Awal
+- [ ] `page/kotoba/intro.php` — parent: `home`, section: `Kotoba Section`, order: 30.
+- [ ] `page/kotoba/list-1.php` — 20 kata dasar (parent: `kotoba-intro`, order: 31).
 
-- [ ] `page/kotoba/intro.php` — kenapa kosakata penting.
-- [ ] `page/kotoba/list-1.php` — 20 kata dasar (angka, salam, kata ganti).
-- [ ] Format: Jepang (kana + kanji kalau ada), romaji, arti, contoh kalimat singkat.
+### 5. Materi Bunpō Awal
 
-### 7. Materi Bunpō Awal
-
-- [ ] `page/bunpo/intro.php` — struktur kalimat Jepang (SOV).
-- [ ] `page/bunpo/particles-1.php` — partikel は, が, を, に, で.
-- [ ] Setiap partikel: penjelasan singkat + 2–3 contoh.
+- [ ] `page/bunpo/intro.php` — SOV.
+- [ ] `page/bunpo/particles-1.php` — は, が, を, に, で.
 
 ---
 
 ## 💭 Future — Priority Low
 
-Hanya dikerjakan jika kebutuhan muncul.
-
-- [ ] Progress tracking via `localStorage` (untuk kuis).
-- [ ] Halaman Milestone 3 ( kombinasi kana, youon きゃ しゅ ちょ, dll).
+- [ ] Progress tracking via `localStorage`.
 - [ ] Dark/light theme toggle.
-- [ ] Backend PHP + MySQL — hanya jika benar-benar butuh konten dinamis.
-- [ ] User authentication — hanya jika ada progress storage.
-- [ ] Deployment ke hosting (GitHub Pages tidak bisa PHP; pertimbangkan
-      shared hosting atau VPS murah).
+- [ ] Backend PHP + MariaDB — hanya jika butuh konten dinamis.
+- [ ] User authentication.
+- [ ] Deployment ke hosting.
+- [ ] Refactor youon grid to `data/youon.php` when building the quiz.
 
 ---
 
-## 🧪 Quality Checks (berkala, sebelum commit)
+## 🧪 Quality Checks
 
-- [ ] Tidak ada inline `style="..."` baru:
-      `grep -rn 'style="' --include="*.php" .`
-- [ ] Tidak ada `<br>` untuk layout:
-      `grep -rn '<br>' --include="*.php" .`
-- [ ] Semua `require_once` diakhiri `;`.
-- [ ] Semua link internal mengarah ke file yang ada.
-- [ ] Active state nav cocok dengan `$current_page` di setiap halaman.
-- [ ] Validasi HTML: <https://validator.w3.org/>.
-- [ ] Test di 375px (HP) dan desktop.
-- [ ] Cek footer tahun berubah otomatis.
+- [x] `grep -rn 'style="' --include="*.php" .` → kosong
+- [x] `grep -rn '<br>' --include="*.php" .` → kosong
+- [x] Semua `require_once` diakhiri `;`
+- [x] Semua link internal mengarah ke file yang ada
+- [x] Active state nav cocok dengan `$current_page`
+- [x] Breadcrumb cocok dengan `$page_hierarchy`
+- [x] Semua halaman punya `<main id="main" tabindex="-1">`
+- [x] Tidak ada `.schedule` / `<tfoot>` tersisa di CSS/PHP
+- [x] Semua kana di M3 pakai `lang="ja"`
+- [ ] Validasi HTML: <https://validator.w3.org/>
+- [ ] Test 375px + desktop (manual)
+- [x] Footer tahun otomatis
 
 ---
 
 ## 📝 Aturan Pengerjaan
 
-- Satu kelompok perubahan = satu commit (kalau pakai Git).
-- Commit message jelas: `feat: hiragana chart`, `fix: nav active state`.
+- Satu kelompok perubahan = satu commit.
+- Commit message: `feat: hiragana chart`, `fix: nav active state`.
 - Jangan lanjut ke fitur baru sebelum Quality Checks hijau.
-- Kalau ragu antara "tambah dokumentasi" atau "tambah fitur", pilih fitur
-  — dokumentasi dibuat saat menyelesaikan masalah nyata, bukan karena
-  "proyek besar biasanya punya".
-- Backend (MySQL, auth) ditunda sampai ada kebutuhan nyata. Saat ini
-  semuanya bisa diselesaikan dengan PHP + CSS + sedikit JS.
+- Backend (MariaDB, auth) ditunda sampai ada kebutuhan nyata.

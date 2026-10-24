@@ -1,42 +1,45 @@
+<?php
+// Group items by nav_section, sort by nav_order
+$navGroups = [];
+foreach ($page_hierarchy as $id => $page) {
+	if (!isset($page['nav_section'])) {
+		continue; // halaman yang tidak ingin tampil di menu
+	}
+	$section = $page['nav_section'];
+	$navGroups[$section][] = ['id' => $id, 'page' => $page];
+}
+foreach ($navGroups as &$g) {
+	usort($g, fn ($a, $b) => $a['page']['nav_order'] <=> $b['page']['nav_order']);
+}
+unset($g);
+?>
 <nav aria-label="Main navigation">
-    <details class="menu-container">
-        <summary class="menu-toggle" aria-label="Open navigation menu">
-            <span aria-hidden="true">☰</span>
-        </summary>
+	<details class="menu-container">
+		<summary class="menu-toggle" aria-label="Navigation menu">
+			<span aria-hidden="true">☰</span>
+		</summary>
 
-        <div class="dropdown-content">
-            <a href="<?= e($base_url) ?>index.php"
-               <?= ($current_page ?? '') === 'home' ? 'class="active" aria-current="page"' : '' ?>>
-                Home
-            </a>
-            <a href="<?= e($base_url) ?>page/intro.php"
-               <?= ($current_page ?? '') === 'intro' ? 'class="active" aria-current="page"' : '' ?>>
-                Introduction
-            </a>
-
-            <span class="nav-label">Kana Section</span>
-            <div class="nav-group">
-                <a href="<?= e($base_url) ?>page/kana/intro-kana.php"
-                   <?= ($current_page ?? '') === 'kana-intro' ? 'class="active" aria-current="page"' : '' ?>>
-                    Kana Introduction
-                </a>
-				<a href="<?= e($base_url) ?>page/kana/hiragana/hiragana-chart.php"
-					<?= ($current_page ?? '') === 'hiragana-chart' ? 'class="active" aria-current="page"' : '' ?>>
-					Hiragana Chart
-				</a>
-            </div>
-
-            <span class="nav-label">Milestones</span>
-            <div class="nav-group">
-                <a href="<?= e($base_url) ?>milestone/hiragana-m1.php"
-                   <?= ($current_page ?? '') === 'm1' ? 'class="active" aria-current="page"' : '' ?>>
-                    Milestone 1: Basic Hiragana
-                </a>
-                <a href="<?= e($base_url) ?>milestone/hiragana-m2.php"
-                   <?= ($current_page ?? '') === 'm2' ? 'class="active" aria-current="page"' : '' ?>>
-                    Milestone 2: Hiragana Derivatives
-                </a>
-            </div>
-        </div>
-    </details>
+		<div class="dropdown-content">
+			<?php foreach ($navGroups as $section => $items): ?>
+				<?php if ($section === ''): ?>
+					<?php foreach ($items as $item): ?>
+						<a href="<?= e($base_url . $item['page']['url']) ?>"
+						   <?= ($current_page ?? '') === $item['id'] ? 'class="active" aria-current="page"' : '' ?>>
+							<?= e($item['page']['label']) ?>
+						</a>
+					<?php endforeach; ?>
+				<?php else: ?>
+					<span class="nav-label"><?= e($section) ?></span>
+					<div class="nav-group">
+						<?php foreach ($items as $item): ?>
+							<a href="<?= e($base_url . $item['page']['url']) ?>"
+							   <?= ($current_page ?? '') === $item['id'] ? 'class="active" aria-current="page"' : '' ?>>
+								<?= e($item['page']['label']) ?>
+							</a>
+						<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
+			<?php endforeach; ?>
+		</div>
+	</details>
 </nav>

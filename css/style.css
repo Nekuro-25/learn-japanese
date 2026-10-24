@@ -117,7 +117,6 @@ body {
 	border-color: var(--accent-color);
 }
 
-/* Dropdown */
 .dropdown-content {
 	display: flex;
 	flex-direction: column;
@@ -156,7 +155,6 @@ body {
 	border-color: var(--accent-color);
 }
 
-/* Sub-groups */
 .nav-group {
 	display: flex;
 	flex-direction: column;
@@ -208,7 +206,7 @@ main p {
 	margin-top: 8px;
 }
 
-.schedule {
+.list-clean {
 	list-style: none;
 	padding-left: 0;
 	display: flex;
@@ -217,7 +215,7 @@ main p {
 	color: var(--text-secondary);
 }
 
-.schedule strong {
+.list-clean strong {
 	color: var(--text-primary);
 }
 
@@ -247,8 +245,7 @@ main p {
 }
 
 .kana-table thead th,
-.kana-table tbody th,
-.kana-table tfoot th {
+.kana-table tbody th {
 	background-color: rgba(255, 255, 255, 0.03);
 	font-size: 0.8rem;
 	font-weight: 600;
@@ -257,8 +254,7 @@ main p {
 	letter-spacing: 0.05em;
 }
 
-.kana-table tbody th,
-.kana-table tfoot th {
+.kana-table tbody th {
 	width: 40px;
 }
 
@@ -292,6 +288,70 @@ main p {
 
 .kana-table .standalone .romaji {
 	display: inline;
+}
+
+/* ============================================================
+   Breadcrumb & Back link
+   ============================================================ */
+.breadcrumb {
+	margin-bottom: 20px;
+	font-size: 0.85rem;
+	color: var(--text-secondary);
+}
+
+.breadcrumb ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	align-items: center;
+}
+
+.breadcrumb li {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.breadcrumb li:not(:last-child)::after {
+	content: "/";
+	color: var(--border-color);
+}
+
+.breadcrumb a {
+	color: var(--text-secondary);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+	color: var(--accent-color);
+	text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+	color: var(--text-primary);
+	font-weight: 500;
+}
+
+.back-link {
+	margin-top: 32px;
+	padding-top: 16px;
+	border-top: 1px solid var(--border-color);
+	font-size: 0.9rem;
+}
+
+.back-link a {
+	color: var(--accent-color);
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.2s ease;
+}
+
+.back-link a:hover {
+	text-decoration: underline;
 }
 
 /* ============================================================
@@ -346,8 +406,49 @@ summary:focus-visible {
 	}
 
 	.kana-table thead th,
-	.kana-table tbody th,
-	.kana-table tfoot th {
+	.kana-table tbody th {
 		font-size: 0.7rem;
 	}
+
+	.breadcrumb {
+		font-size: 0.8rem;
+	}
+
+	.breadcrumb ol {
+		gap: 4px;
+	}
+}
+
+/* ============================================================
+   Skip-link
+   ============================================================ */
+.skip-link {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	background-color: var(--accent-color);
+	color: var(--bg-color);
+	padding: 10px 16px;
+	border-radius: 0 0 var(--radius) 0;
+	text-decoration: none;
+	font-weight: 600;
+	z-index: 1000;
+	transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+	top: 0;
+}
+
+main:focus {
+	outline: none;
+}
+
+/* ============================================================
+   Details open state
+   ============================================================ */
+.menu-container[open] .menu-toggle {
+	background-color: var(--accent-color);
+	color: var(--bg-color);
+	border-color: var(--accent-color);
 }
