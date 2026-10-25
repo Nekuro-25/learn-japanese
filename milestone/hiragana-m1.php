@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config.php';
 
 $page_title       = "Milestone 1: Basic Hiragana - Learn Japanese";
 $page_heading     = "MILESTONE 1: BASIC HIRAGANA";
-$page_subtitle    = "Learn and Read the 46 Basic Hiragana Characters";
-$page_description = "A flexible learning plan for recognizing, recalling, writing, and reading the 46 basic Hiragana characters.";
+$page_subtitle    = "Let's Get Familiar with the 46 Basic Hiragana";
+$page_description = "My first step toward reading Japanese: learning the 46 basic Hiragana characters.";
 $current_page     = "m1";
 
 include __DIR__ . '/../partials/head.php';
@@ -15,113 +15,128 @@ include __DIR__ . '/../partials/breadcrumb.php';
 <main id="main" tabindex="-1">
 	<div class="content-stack">
 		<p>
-			Okay, while I was studying Japanese, I had a thought:
-			"Why focus only on how much time I spend studying?
-			Why not set milestones so I can track what I've actually learned?"
-			And boom — that's why this page exists.
+			Okay, so while I was studying Japanese, I had a thought:
+			"Why am I only tracking how much time I spend studying?
+			Why not set milestones so I can actually see what I've learned?"
+			And boom — that's how this whole milestone idea started.
 		</p>
 
 		<p>
-			I want to organize my Hiragana learning into three milestones.
-			I don't want to create too many milestones for one topic,
-			so I'll keep them focused on specific learning goals.
-			If a topic turns out to be manageable, there's no need to
-			split it into too many parts. Without further ado, let's
-			start with the first milestone!
+			I want to split my Hiragana journey into three milestones.
+			Nothing too complicated, though. I don't want to create
+			a million milestones just to learn one topic.
+			If something is manageable, let's keep it simple.
+			Without further ado, let's jump into the first one!
 		</p>
 
 		<h2 class="subsection-title">
-			1. Learn the 46 Basic Hiragana Characters (Gojūon)
+			1. Learn the 46 Basic Hiragana (Gojūon)
 		</h2>
 
 		<p>
-			The goal of this milestone is to learn all 46 basic Hiragana
-			characters and gradually recognize them without consciously
-			thinking about each character's sound.
-			One week is my initial target, but everyone learns at a
-			different pace. Take more time if you need it.
+			First things first: the 46 basic Hiragana characters.
+			These little characters are one of the foundations of
+			reading Japanese, so getting familiar with them is a must.
 		</p>
 
-		<h3>Suggested 7-Day Learning Plan</h3>
+		<p>
+			My initial goal is to learn them in one week.
+			Can I do it? Hopefully! But this isn't a race, and
+			I don't expect everyone to learn at the same speed.
+			Feel free to take more time if you need it.
+		</p>
+
+		<h3>My Suggested 7-Day Plan</h3>
 
 		<ul class="list-clean">
 			<li>
-				<strong>Day 1–2: Recognize and Memorize.</strong>
-				Learn the shapes and sounds of the characters in small
-				groups. Practice recognizing each character and recalling
-				its sound without relying on romaji.
+				<strong>Day 1–2: Get to Know the Characters.</strong>
+				Start with small groups of Hiragana. Learn what each
+				character looks like and how it sounds.
+				Keep testing yourself instead of just staring at the chart
+				and hoping your brain magically remembers everything.
 			</li>
 			<li>
-				<strong>Day 3–4: Recall and Write.</strong>
-				Review previously learned characters, write them from
-				memory, and practice writing the correct character when
-				given its sound. Continue reviewing characters you often
-				mistake.
+				<strong>Day 3–4: Time to Write!</strong>
+				Review what you've learned and try writing the characters
+				from memory. You can also practice the other way around:
+				hear a sound, then write the matching Hiragana.
+				If you keep mixing up two characters, give them extra attention.
 			</li>
 			<li>
-				<strong>Day 5–6: Read and Review.</strong>
-				Read individual characters, simple character combinations,
-				and familiar words written with the Hiragana you have
-				learned. Mix old and new characters and spend extra time
-				on the ones you still find difficult.
+				<strong>Day 5–6: Let's Start Reading.</strong>
+				Read individual characters, simple combinations, and
+				familiar words using the Hiragana you've learned.
+				Mix them up so you're not just memorizing their order
+				on the chart. Keep practicing the troublesome ones, too.
 			</li>
 			<li>
-				<strong>Day 7: Test Your Progress.</strong>
-				Take a 30-question quiz and answer at least 25 questions
-				correctly to pass the quiz. Also check your writing and
-				reading fluency separately, because a quiz score alone
-				cannot prove that you can write from memory or read fluently.
+				<strong>Day 7: Test Time!</strong>
+				Take a 30-question quiz. You'll need at least 25 correct
+				answers to pass. We'll also check writing and reading
+				separately, because getting a good quiz score doesn't
+				automatically mean you can write everything from memory
+				or read it smoothly.
 			</li>
 		</ul>
 
 		<p>
-			This schedule is a suggested pace, not a deadline.
-			Review difficult characters for as long as necessary.
-			Short, repeated practice sessions are more useful than
-			rushing through the material just to finish the week.
+			Remember, this is just my suggested schedule, not a deadline.
+			If you need two weeks instead of one, that's completely fine.
+			It's better to remember what you've learned than to rush
+			through everything just to say you've finished.
 		</p>
 
-		<h3>Criteria for Completing This Milestone</h3>
+		<h3>So, When Can We Call M1 Done?</h3>
+
+		<p>
+			Here are the things I want to be able to do before moving on:
+		</p>
 
 		<ul class="list-clean">
 			<li>
-				<strong>Recognize Characters Quickly and Accurately:</strong>
-				Identify the sounds of the 46 basic Hiragana characters
-				accurately and with little hesitation, including when
-				the characters appear in random order.
+				<strong>Recognize Characters Without Hesitating.</strong>
+				I should be able to identify all 46 basic Hiragana
+				accurately, even when they appear in random order.
+				I don't want to keep stopping to remember what each
+				character sounds like.
 			</li>
 			<li>
-				<strong>Write Characters from Memory:</strong>
-				Write the correct Hiragana character when given its sound,
-				without looking at a chart, textbook, or cheatsheet.
+				<strong>Write Without Cheating.</strong>
+				Given a sound, I should be able to write the matching
+				Hiragana without looking at a chart or cheatsheet.
+				Yes, that means no sneaky peeking!
 			</li>
 			<li>
-				<strong>Read Hiragana Combinations and Words Fluently:</strong>
-				Read familiar combinations and simple words without
-				stopping to recall the sound of each individual character.
-				Gradually work toward reading short, beginner-friendly
-				passages written with the Hiragana you have learned.
+				<strong>Start Reading Simple Words.</strong>
+				I should be able to read familiar combinations and
+				simple words without mentally sounding out every
+				character one by one. Short, beginner-friendly passages
+				are the next step.
 			</li>
 		</ul>
 
 		<p>
-			Reading fluency does not mean reading without any pauses at all.
-			Natural pauses are normal. The goal is to stop hesitating over
-			individual characters, not to rush through every sentence.
-			Reading fluently also does not automatically mean understanding
-			every word or sentence.
+			By "reading smoothly", I don't mean reading at lightning
+			speed without taking a breath. Natural pauses are fine!
+			What I want to avoid is getting stuck on every single
+			Hiragana because I can't remember its sound.
+			And of course, reading the characters doesn't mean
+			I automatically understand every word yet.
 		</p>
 
 		<p>
-			<strong>One important note:</strong>
-			This milestone focuses on the 46 basic Hiragana characters.
-			You'll learn additional sound variations and reading rules
-			in the next milestones, so you don't need to master them here.
+			<strong>One last thing:</strong>
+			This milestone covers the 46 basic Hiragana characters.
+			There are more sound variations and reading rules to learn,
+			but we'll deal with those in the next milestones.
+			No need to overwhelm ourselves on day one!
 		</p>
 
 		<p class="spaced">
-			That's it for the first milestone! Learn at your own pace,
-			keep reviewing, and I'll see you in the next one.
+			And that's it for M1! Take your time, keep practicing,
+			and don't let a couple of confusing characters ruin your day.
+			See you in the next milestone!
 		</p>
 
 		<?php include __DIR__ . '/../partials/pager.php'; ?>

@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config.php';
 
 $page_title       = "Milestone 2: Dakuten and Handakuten - Learn Japanese";
 $page_heading     = "MILESTONE 2: DAKUTEN AND HANDAKUTEN";
-$page_subtitle    = "Learn the 25 Additional Hiragana Sound Variations";
-$page_description = "A flexible learning plan for recognizing, recalling, writing, and reading Hiragana with dakuten and handakuten.";
+$page_subtitle    = "25 More Hiragana Forms? Let's Do This!";
+$page_description = "My next Hiragana milestone: learning dakuten and handakuten sound variations.";
 $current_page     = "m2";
 
 include __DIR__ . '/../partials/head.php';
@@ -15,140 +15,152 @@ include __DIR__ . '/../partials/breadcrumb.php';
 <main id="main" tabindex="-1">
 	<div class="content-stack">
 		<p>
-			If you've completed the first milestone, you should already
-			be familiar with the 46 basic Hiragana characters.
-			Now it's time to learn another 25 character forms:
-			Hiragana with dakuten and handakuten.
+			Back again! If you've finished M1, you should already
+			know the 46 basic Hiragana characters.
+			Hopefully, your brain and the characters have finally
+			become friends. Now it's time to add 25 more forms to
+			the collection.
 		</p>
 
 		<p>
-			These marks may look like small cosmetic additions, but
-			they change how a character is pronounced.
-			You don't need to relearn every character from scratch.
-			Instead, learn how these marks change the sounds you
-			already know.
+			Don't panic, though. We're not starting from zero again.
+			These new forms use characters you already know, with
+			a couple of little marks added to them.
+			They look like tiny cosmetic upgrades, but they actually
+			change the sounds. Pretty important little marks, huh?
 		</p>
 
 		<h2 class="subsection-title">
-			1. Learn 25 Additional Hiragana Forms
-			(Dakuten and Handakuten)
+			1. Learn 25 More Hiragana Forms
 		</h2>
 
-		<h3>What Are Dakuten and Handakuten?</h3>
+		<h3>So, What Are Dakuten and Handakuten?</h3>
+
+		<p>
+			Let's keep this simple.
+		</p>
 
 		<p>
 			<strong>Dakuten (゛):</strong>
-			Two small strokes written at the upper-right of a Hiragana
-			character. For example, か (ka) becomes が (ga).
+			Those two little strokes at the upper-right of a character.
+			For example, <span lang="ja">か</span> (<em>ka</em>)
+			becomes <span lang="ja">が</span> (<em>ga</em>).
 		</p>
 
 		<p>
 			<strong>Handakuten (゜):</strong>
-			A small circle written at the upper-right of a Hiragana
-			character. For example, は (ha) becomes ぱ (pa).
+			The little circle at the upper-right.
+			For example, <span lang="ja">は</span> (<em>ha</em>)
+			becomes <span lang="ja">ぱ</span> (<em>pa</em>).
 		</p>
 
 		<p>
-			Not every basic Hiragana character can take these marks.
-			Use the Hiragana chart to study which characters have
-			these sound variations.
+			Not every Hiragana can use these marks, so don't go
+			adding them randomly and hope for the best.
+			Check the chart to see which characters have these
+			sound variations.
 		</p>
 
-		<h3>Suggested 3-Day Learning Plan</h3>
+		<h3>My Suggested 3-Day Plan</h3>
 
 		<ul class="list-clean">
 			<li>
-				<strong>Day 1: Recognize, Recall, and Write.</strong>
-				Learn the 25 additional forms and their sounds.
-				Practice matching each character to its pronunciation,
-				then write it from memory. Compare similar-looking
-				pairs, such as か and が, to avoid mixing them up.
+				<strong>Day 1: Look, Listen, and Write.</strong>
+				Get familiar with the 25 additional forms and their
+				sounds. Practice matching each character to its sound,
+				then try writing it from memory.
+				Pay extra attention to pairs like
+				<span lang="ja">か</span> and <span lang="ja">が</span>.
+				That little mark is easy to miss when you're in a hurry!
 			</li>
 			<li>
 				<strong>Day 2: Read and Speak.</strong>
-				Review the new forms in random order, then read
-				familiar words and short beginner-friendly passages
-				that use them. Read aloud to practice pronunciation.
-				Repeat any characters or words that cause hesitation.
+				Time to put those characters to work.
+				Read familiar words and short, beginner-friendly passages
+				that contain the new forms. Try reading aloud, too,
+				and revisit anything that makes you hesitate.
 			</li>
 			<li>
-				<strong>Day 3: Test Your Progress.</strong>
-				Take a 30-question quiz that mixes the 46 basic
-				Hiragana characters with the 25 additional forms.
-				Answer at least 25 questions correctly to pass the quiz.
-				Also test your writing and reading separately, because
-				a quiz score alone cannot prove those skills.
+				<strong>Day 3: Test Time!</strong>
+				Take another 30-question quiz, this time mixing the
+				46 basic characters with the 25 additional forms.
+				You'll need at least 25 correct answers to pass.
+				After that, check your writing and reading separately.
 			</li>
 		</ul>
 
 		<p>
-			This three-day schedule is a suggested pace, not a deadline.
-			Take extra time if you still confuse the basic characters
-			with their dakuten or handakuten forms.
-			Short, repeated practice sessions are more useful than
-			rushing just to finish the milestone.
+			Three days is my target, but don't treat it like a
+			countdown timer. If <span lang="ja">ば</span>,
+			<span lang="ja">ぱ</span>, and <span lang="ja">は</span>
+			keep getting mixed up, slow down and practice those first.
+			There's no prize for finishing quickly and forgetting
+			everything the next morning!
 		</p>
 
-		<h3>Criteria for Completing This Milestone</h3>
+		<h3>What Do I Need to Do Before Moving On?</h3>
 
 		<ul class="list-clean">
 			<li>
-				<strong>Recognize the Additional Forms:</strong>
-				Identify the sounds of all 25 dakuten and handakuten
-				forms accurately, including when they appear in random
-				order alongside basic Hiragana.
+				<strong>Recognize the New Forms.</strong>
+				I should be able to identify all 25 additional forms
+				and read their sounds correctly, even when they're
+				mixed with basic Hiragana in random order.
 			</li>
 			<li>
-				<strong>Distinguish Similar Characters:</strong>
-				Correctly tell the difference between basic characters
-				and their modified forms, such as さ and ざ,
-				は and ば, or は and ぱ.
+				<strong>Spot the Difference.</strong>
+				I shouldn't confuse a basic character with its
+				modified form. For example:
+				<span lang="ja">さ / ざ</span>,
+				<span lang="ja">は / ば</span>, and
+				<span lang="ja">は / ぱ</span>.
+				Those little marks aren't decoration!
 			</li>
 			<li>
-				<strong>Write Characters from Memory:</strong>
-				Write the correct character when given its sound,
-				without looking at the Hiragana chart or a cheatsheet.
+				<strong>Write from Memory.</strong>
+				Given a sound, I should be able to write the right
+				character without checking the chart or cheatsheet.
 			</li>
 			<li>
-				<strong>Read Words and Short Passages:</strong>
-				Read familiar words and beginner-friendly passages
-				containing both basic Hiragana and the additional forms
-				without repeatedly stopping to recall each character's
-				sound.
+				<strong>Read Words Without Getting Stuck.</strong>
+				I should be able to read familiar words and short
+				passages containing both basic and modified Hiragana
+				without constantly stopping to figure out each character.
 			</li>
 			<li>
-				<strong>Pass the Quiz:</strong>
-				Answer at least 25 out of 30 questions correctly.
-				Review mistakes before attempting the quiz again.
+				<strong>Pass the Quiz.</strong>
+				At least 25 out of 30 questions correct.
+				If I miss some, I'll review the mistakes and try again
+				instead of pretending they don't exist.
 			</li>
 		</ul>
 
 		<p>
-			Reading fluency does not mean reading without any pauses
-			at all. The goal is to recognize the characters without
-			needing to consciously recall every individual sound.
-			Reading fluently also does not automatically mean
-			understanding every word or sentence.
+			And remember, reading smoothly doesn't mean racing
+			through every word. I just want to stop hesitating
+			over individual characters. Understanding every word
+			is another skill that we'll keep building over time.
 		</p>
 
 		<p>
-			<strong>One important note:</strong>
-			This milestone focuses on dakuten and handakuten.
-			You will study other Hiragana combinations and sound rules
-			in the next milestone, so you don't need to master them here.
+			<strong>One more thing:</strong>
+			M2 is all about dakuten and handakuten.
+			We'll get to other combinations and sound rules in M3,
+			so let's not throw everything into one giant learning soup.
 		</p>
 
 		<p>
-			Practice with the
+			Need a quick refresher? Check out the
 			<a href="<?= e($base_url) ?>page/kana/hiragana/hiragana-chart.php">
 				Hiragana chart →
 			</a>
 		</p>
 
 		<p class="spaced">
-			That's it for the second milestone!
-			Keep reviewing the characters you find difficult,
-			and I'll see you in the next one.
+			And that's M2 done! Keep an eye on those tiny marks,
+			give the tricky characters some extra practice,
+			and I'll see you in the final Hiragana milestone.
+			We're getting there!
 		</p>
 
 		<?php include __DIR__ . '/../partials/pager.php'; ?>
