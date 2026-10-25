@@ -16,7 +16,7 @@ include __DIR__ . '/../partials/breadcrumb.php';
 	<div class="content-stack">
 		<p>
 			Okay, so while I was working, I had a thought:
-			"Why not use the time to study? Why don't I set milestones
+			"Why using timeset to study? Why don't I set milestones
 			so I can actually track how much I've learned?" And boom —
 			that's why this page exists.
 		</p>
@@ -33,14 +33,36 @@ include __DIR__ . '/../partials/breadcrumb.php';
 			hiragana in one week. I don't know how yet, but we must.
 		</p>
 		<ul class="list-clean">
-			<li><strong>Day 1–3:</strong> Full writing and memorization.</li>
-			<li><strong>Day 4–6:</strong> Reading and speaking.</li>
-			<li><strong>Day 7:</strong> Full test — read all 46 basic hiragana fluently (fast reading; accent not required).</li>
+			<li>
+				<strong>Day 1–2:</strong> Learn the character group, handshake with the character look, and memorize it.
+			</li>
+			<li>
+				<strong>Day 3–4:</strong> Learn how to to write, from a textbook and from the sound. 
+			</li>
+			<li>
+				<strong>Day 5-6:</strong> Read character combination and Kotoba while keep repeating the hard character.
+			</li>
+			<li>
+				<strong>Day 7:</strong> Time to test your 1 week study, there'll be 30 question, and you need to answer with minimum 25 correct to pass this test.
+			</li>
 		</ul>
 		<p>
-			I can only move on to the second milestone once I can read
-			every character without delay.
-		</p>
+			The criteria to pass this milestone is:
+		</p> 
+		<ul class="list-clean">	
+			<li>
+				<strong>Accurate and Quick to Knowing the Character:</strong> 
+				Knowing the character and read it in under 1 seconds.
+			</li>
+			<li>
+				<strong>Write Character From Your Head:</strong>
+				Know how to write the character without looking at your cheatsheet.
+			</li>
+			<li>
+				<strong>Read Combination of Character Fluently:</strong>
+				Can read Combination of character or basic conversation fluently (Exception for accent).
+			</li>
+		</ul>
 		<p class="spaced">
 			Okay, that's it for the first milestone — goodbye.
 		</p>
