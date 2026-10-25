@@ -77,6 +77,7 @@ include __DIR__ . '/../../partials/breadcrumb.php';
 			<a href="<?= e($base_url) ?>page/kana/hiragana/hiragana-chart.php">Hiragana chart</a>.
 		</p>
 
+		<?php include __DIR__ . '/../../partials/pager.php'; ?>
 		<?php include __DIR__ . '/../../partials/back-link.php'; ?>
 	</div>
 </main>

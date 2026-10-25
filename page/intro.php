@@ -59,6 +59,7 @@ include __DIR__ . '/../partials/breadcrumb.php';
 			That's it for the introduction — goodbye, everyone.
 		</p>
 
+		<?php include __DIR__ . '/../partials/pager.php'; ?>
 		<?php include __DIR__ . '/../partials/back-link.php'; ?>
 	</div>
 </main>

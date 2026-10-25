@@ -190,6 +190,7 @@ include __DIR__ . '/../../../partials/breadcrumb.php';
 			<li><strong>ぢ</strong> and <strong>づ</strong> have the same sound as じ and ず in modern Japanese.</li>
 		</ul>
 
+		<?php include __DIR__ . '/../../../partials/pager.php'; ?>
 		<?php include __DIR__ . '/../../../partials/back-link.php'; ?>
 	</div>
 </main>

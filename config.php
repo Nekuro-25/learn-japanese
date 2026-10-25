@@ -66,3 +66,55 @@ function build_breadcrumbs(?string $current, array $hierarchy): array
 
 	return $trail;
 }
+
+/**
+ * Bangun urutan navigasi (prev/next) dalam section yang sama,
+ * diurutkan berdasarkan nav_order.
+ *
+ * Halaman dengan nav_section yang sama dianggap satu sequence.
+ * Section '' (standalone) juga dianggap satu group.
+ * Halaman dengan nav_section = null (tidak muncul di menu) tidak
+ * pernah dianggap sebagai bagian dari sequence.
+ *
+ * Return: ['prev' => item|null, 'next' => item|null]
+ *   item = ['id' => string, 'nav_order' => int, 'page' => array]
+ */
+function build_sequence(?string $current, array $hierarchy): array
+{
+	if ($current === null || !isset($hierarchy[$current])) {
+		return ['prev' => null, 'next' => null];
+	}
+
+	$section = $hierarchy[$current]['nav_section'] ?? null;
+	if ($section === null) {
+		return ['prev' => null, 'next' => null];
+	}
+
+	$siblings = [];
+	foreach ($hierarchy as $id => $page) {
+		if (!isset($page['nav_section'])) {
+			continue;
+		}
+		if ($page['nav_section'] !== $section) {
+			continue;
+		}
+		$siblings[] = [
+			'id'        => $id,
+			'nav_order' => $page['nav_order'] ?? 0,
+			'page'      => $page,
+		];
+	}
+
+	usort($siblings, fn ($a, $b) => $a['nav_order'] <=> $b['nav_order']);
+
+	foreach ($siblings as $i => $sib) {
+		if ($sib['id'] === $current) {
+			return [
+				'prev' => $siblings[$i - 1] ?? null,
+				'next' => $siblings[$i + 1] ?? null,
+			];
+		}
+	}
+
+	return ['prev' => null, 'next' => null];
+}

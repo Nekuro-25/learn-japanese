@@ -65,10 +65,15 @@
 ### Navigasi Internal
 
 - [x] Breadcrumb + back link di semua halaman (via `$page_hierarchy`).
-- [x] M1 → M2.
-- [x] M2 → M3.
-- [x] Link chart di akhir M2.
+- [x] `build_sequence()` di `config.php` — prev/next per section.
+- [x] `partials/pager.php` — komponen prev/next auto-generated.
+- [x] Back-link auto-skip jika sama dengan pager-prev.
+- [x] Nav section label di-highlight (`nav-label-active`).
+- [x] Hapus link "Next" manual di M1 & M2.
+- [x] CSS `.pager` + `.nav-label-active` + responsive (single-col di ≤600px).
+- [x] Link chart di akhir M2 (kontekstual, bukan sekuensial).
 - [x] Link chart di akhir `intro-kana.php`.
+- [ ] Test 375px pager (manual).
 
 ### Accessibility
 
@@ -106,7 +111,7 @@
 - [ ] **Keputusan data structure:** file baru `data/katakana.php` (rekomendasi) — biar `hiragana-chart.php` dan `katakana-chart.php` independen.
 - [ ] Buat `data/katakana.php` dengan 46 gojūon + 25 dakuten/handakuten (mirror dari `data/kana.php`).
 - [ ] Buat `page/kana/katakana/katakana-chart.php` — copy `hiragana-chart.php`, ganti `require` data ke `data/katakana.php`.
-- [ ] Tambah entry di `$page_hierarchy` (parent: `kana-intro`, section: `Kana Section`, order: 12).
+- [ ] Tambah entry di `$page_hierarchy` (parent: `kana-intro`, section: `Kana Section`, order: 12) — pager & nav otomatis update.
 - [ ] Opsional: rename `data/kana.php` → `data/hiragana.php` untuk konsistensi.
 - [ ] Tabel konversi Hiragana ↔ Katakana (nice-to-have).
 

@@ -18,6 +18,8 @@ include __DIR__ . '/partials/header.php';
 			learning journey while improving my English
 			and coding skills.
 		</p>
+
+		<?php include __DIR__ . '/partials/pager.php'; ?>
 	</div>
 </main>
 

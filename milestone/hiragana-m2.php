@@ -52,13 +52,8 @@ include __DIR__ . '/../partials/breadcrumb.php';
 				Hiragana chart →
 			</a>
 		</p>
-		<p>
-			Next:
-			<a href="<?= e($base_url) ?>milestone/hiragana-m3.php">
-				Milestone 3 — Advanced Hiragana →
-			</a>
-		</p>
 
+		<?php include __DIR__ . '/../partials/pager.php'; ?>
 		<?php include __DIR__ . '/../partials/back-link.php'; ?>
 	</div>
 </main>

@@ -21,9 +21,10 @@ progress while improving my English writing and PHP/CSS coding skills.
 - Milestone 2: 25 dakuten/handakuten characters in 3 days.
 - Milestone 3: Advanced Hiragana (youon, sokuon, chouon, hatsuon) +
   Quick Self-Test.
-- Breadcrumb + back link on every content page (auto-derived from
-  `$page_hierarchy`).
+- Breadcrumb, back link, dan prev/next pager — semuanya auto-derived
+  dari `$page_hierarchy` (sumber tunggal).
 - Nav auto-generated from `$page_hierarchy` — add a page = 1 entry.
+- Nav section label di-highlight saat child aktif.
 - Dark, responsive card-based layout.
 - Accessible navigation with `<details>`/`<summary>` dropdown.
 - Skip-to-content link + `main#main` focus target.
@@ -42,5 +43,4 @@ progress while improving my English writing and PHP/CSS coding skills.
 
 Requires PHP 7.4+.
 
-```bash
 php -S localhost:8000

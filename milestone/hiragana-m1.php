@@ -44,13 +44,8 @@ include __DIR__ . '/../partials/breadcrumb.php';
 		<p class="spaced">
 			Okay, that's it for the first milestone — goodbye.
 		</p>
-		<p>
-			Next:
-			<a href="<?= e($base_url) ?>milestone/hiragana-m2.php">
-				Milestone 2 — Dakuten &amp; Handakuten →
-			</a>
-		</p>
 
+		<?php include __DIR__ . '/../partials/pager.php'; ?>
 		<?php include __DIR__ . '/../partials/back-link.php'; ?>
 	</div>
 </main>
