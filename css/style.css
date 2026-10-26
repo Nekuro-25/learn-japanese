@@ -539,3 +539,20 @@ main:focus {
 	color: var(--bg-color);
 	border-color: var(--accent-color);
 }
+
+/* ============================================================
+   Markdown content — element-based styles
+   (menggantikan class .section-title / .subsection-title
+    untuk halaman yang ditulis sebagai markdown)
+   ============================================================ */
+.content-stack h2 {
+	font-size: 1.2rem;
+	color: var(--text-primary);
+	margin-top: 4px;
+}
+
+.content-stack h3 {
+	font-size: 1.1rem;
+	color: var(--text-primary);
+	margin-top: 8px;
+}
