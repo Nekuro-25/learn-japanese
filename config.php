@@ -54,6 +54,17 @@ $page_hierarchy = [
 		'subtitle'    => 'Why I started this journey',
 		'description' => 'The story behind this Japanese learning project.',
 	],
+	'journal' => [
+		'label'       => 'Learning Journal',
+		'url'         => 'page/journal.php',
+		'parent'      => 'home',
+		'nav_section' => '',
+		'nav_order'   => 3,
+		'title'       => 'Learning Journal',
+		'heading'     => 'LEARNING JOURNAL',
+		'subtitle'    => 'Weekly progress notes',
+		'description' => 'A weekly journal of my Japanese learning progress.',
+	],
 	'kana-intro' => [
 		'label'       => 'Kana Introduction',
 		'url'         => 'page/kana/intro-kana.php',
