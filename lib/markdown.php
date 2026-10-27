@@ -3,9 +3,19 @@
 /**
  * Markdown parser minimal — cukup untuk kebutuhan proyek ini.
  *
- * Didukung: heading (#..######), unordered list (- item),
- * paragraf, **bold**, *italic*, `inline code`, [teks](url),
- * dan raw HTML inline (mis. <span lang="ja">).
+ * Didukung:
+ * - heading (#..######)
+ * - unordered list (- item)
+ * - ordered list (1. item)
+ * - fenced code block (```lang)
+ * - blockquote (> text)
+ * - paragraf
+ * - **bold**, *italic*, `inline code`, [teks](url)
+ * - raw HTML inline (mis. <span lang="ja">)
+ *
+ * Tidak didukung: tabel, nested list multi-level, image syntax,
+ * reference link, footnote, fenced code block yang berisi baris kosong
+ * (gunakan raw <pre><code> untuk kasus itu).
  *
  * URL relatif otomatis di-prefix $base_url; URL absolut
  * (http://, https://, //, #anchor, mailto:) dibiarkan.
@@ -35,6 +45,23 @@ function markdown_to_html(string $md, string $base_url = '/'): string
 			continue;
 		}
 
+		// Fenced code block — HARUS sebelum blockquote & list
+		if (preg_match('/^```([a-z]*)\n(.*)\n```$/s', $block, $m)) {
+			$lang = $m[1] !== ''
+				? ' class="language-' . htmlspecialchars($m[1], ENT_QUOTES, 'UTF-8') . '"'
+				: '';
+			$code = htmlspecialchars($m[2], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+			$html[] = '<pre><code' . $lang . '>' . $code . '</code></pre>';
+			continue;
+		}
+
+		// Blockquote — parse isi secara rekursif
+		if (preg_match('/^>\s?/', $block)) {
+			$inner  = preg_replace('/^>\s?/m', '', $block);
+			$html[] = '<blockquote>' . markdown_to_html($inner, $base_url) . '</blockquote>';
+			continue;
+		}
+
 		// Unordered list
 		if (preg_match('/^-\s+/', $block)) {
 			$items = preg_split('/\n(?=-\s+)/', $block);
@@ -44,6 +71,18 @@ function markdown_to_html(string $md, string $base_url = '/'): string
 				$lis .= '<li>' . inline_md($item, $base_url) . '</li>';
 			}
 			$html[] = '<ul class="list-clean">' . $lis . '</ul>';
+			continue;
+		}
+
+		// Ordered list
+		if (preg_match('/^\d+\.\s+/', $block)) {
+			$items = preg_split('/\n(?=\d+\.\s+)/', $block);
+			$lis   = '';
+			foreach ($items as $item) {
+				$item = preg_replace('/^\d+\.\s+/', '', $item);
+				$lis .= '<li>' . inline_md($item, $base_url) . '</li>';
+			}
+			$html[] = '<ol class="list-clean">' . $lis . '</ol>';
 			continue;
 		}
 
