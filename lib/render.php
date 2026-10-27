@@ -40,7 +40,10 @@ if ($current_page === null) {
 $page = $page_hierarchy[$current_page];
 
 // ─── 2. Metadata (dari hierarchy, fallback ke label) ───────
-$page_title       = ($page['title'] ?? $page['label']) . ' - ' . $site_name;
+$page_title = $page['title'] ?? $page['label'];
+if ($page_title !== $site_name) {
+	$page_title .= ' - ' . $site_name;
+}
 $page_heading     = $page['heading'] ?? strtoupper($page['label']);
 $page_subtitle    = $page['subtitle'] ?? '';
 $page_description = $page['description'] ?? '';
