@@ -76,6 +76,17 @@ $page_hierarchy = [
 		'subtitle'    => 'All 46 basic Hiragana, 25 Dakuten/Handakuten, and 33 Youon combinations',
 		'description' => 'The target for this page is knowing the shape, pronunciation, and memorization of all Hiragana forms.',
 	],
+	'katakana-chart' => [
+		'label'       => 'Katakana Chart',
+		'url'         => 'page/kana/katakana/katakana-chart.php',
+		'parent'      => 'kana-intro',
+		'nav_section' => 'Kana Section',
+		'nav_order'   => 12,
+		'title'       => 'Katakana Chart',
+		'heading'     => 'KATAKANA CHART',
+		'subtitle'    => 'All 46 basic Katakana, 25 Dakuten/Handakuten, and 33 Youon combinations',
+		'description' => 'The Katakana counterpart to the Hiragana chart.',
+	],
 	'm1' => [
 		'label'       => 'Milestone 1',
 		'url'         => 'milestone/hiragana-m1.php',
