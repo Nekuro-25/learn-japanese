@@ -1,24 +1,35 @@
 # Learning Log
 
-Weekly journal — the reason this project exists. Code exists to make
-documenting the journey easier, not the other way around.
+> **Source of truth** untuk halaman journal di situs ada di `content/page/journal/`.
+> File ini adalah template + draft. Setiap minggu:
+>
+> 1. Copy template di bawah.
+> 2. Isi.
+> 3. Simpan sebagai `content/page/journal/YYYY-MM-DD.md`.
+>
+> Setelah file `.md` baru masuk folder itu, halaman Journal otomatis menampilkannya (newest first).
 
-## Week 1 (2026-10-20 → 2026-10-26)
+## Template
+
+```markdown
+## Week N (YYYY-MM-DD → YYYY-MM-DD)
 
 ### Progress
 
-- [x] All 46 basic Hiragana — memorized on 24 Oct 2026
-- [ ] Youon (きゃ, しゅ, ちょ, ...)
-- [ ] Sokuon (っ — small tsu, double consonant)
-- [ ] Chouon (long vowels)
-- [ ] Hatsuon (ん at the end of a syllable)
+- [ ] ...
 
-### Catatan
+### Stuck
 
-- し vs ち sometimes still mixed up when reading fast.
-- を read as "o" in practice, not "wo".
+- ...
 
-### Target minggu depan
+### One thing I learned
 
-- Start Milestone 3: Youon + Sokuon
-- Practice reading 2–3 kana words
+(paragraf 3–4 kalimat — bukan bullet)
+
+### Next week
+
+- ...
+
+Archive
+
+Lihat folder content/page/journal/ untuk entry mingguan.
