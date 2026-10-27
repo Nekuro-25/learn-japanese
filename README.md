@@ -36,6 +36,8 @@ Nav, breadcrumb, pager, dan metadata akan otomatis ter-update. Tidak perlu sentu
 - Katakana chart — mirror of the Hiragana chart (46 basic + 25
   dakuten/handakuten + 33 youon; core kana from `data/katakana.php`).
 - Learning journal — auto-renders weekly entries from `content/page/journal/*.md`.
+- Kotoba section — Kotoba Introduction + List 1 (greetings, numbers 1–10, pronouns, yes/no).
+- Bunpō section — Bunpō Introduction (SOV) + Particles 1 (は, が, を, に, で).
 - Milestone 1: 46 basic Hiragana in 1 week.
 - Milestone 2: 25 dakuten/handakuten characters in 3 days.
 - Milestone 3: Advanced Hiragana (youon, sokuon, chouon, hatsuon) +
@@ -53,7 +55,6 @@ Nav, breadcrumb, pager, dan metadata akan otomatis ter-update. Tidak perlu sentu
 
 - Kana recognition quiz (JavaScript) — will reuse `data/kana.php`
   (refactor youon grid to `data/youon.php` at that point).
-- Vocabulary and grammar notes.
 - Progress tracking (only if there's a real need).
 
 ## Conventions
