@@ -530,8 +530,8 @@ main:focus {
 
 /* ============================================================
    Markdown content — element-based styles
-   (menggantikan class .section-title / .subsection-title
-    untuk halaman yang ditulis sebagai markdown)
+   Semua heading di content-stack (markdown & PHP content)
+   pakai selector elemen, bukan class.
    ============================================================ */
 .content-stack h2 {
 	font-size: 1.2rem;
