@@ -29,7 +29,8 @@
 ### Next week
 
 - ...
+```
 
-Archive
+## Archive
 
-Lihat folder content/page/journal/ untuk entry mingguan.
+Lihat folder `content/page/journal/` untuk entry mingguan.

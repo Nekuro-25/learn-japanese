@@ -20,6 +20,14 @@ $script = $_SERVER['SCRIPT_NAME'] ?? '/';
 if ($script === '' || $script[0] !== '/') {
 	$script = '/' . $script;
 }
+
+// Subdirectory install: strip $base_url prefix agar cocok dengan
+// URL di $page_hierarchy (yang selalu relatif terhadap base_url).
+// Contoh: /learn-jp/page/intro.php + base_url /learn-jp/ → /page/intro.php
+if ($base_url !== '/' && strpos($script, $base_url) === 0) {
+	$script = '/' . substr($script, strlen($base_url));
+}
+
 if ($script === '/') {
 	$script = '/index.php';
 }

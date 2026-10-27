@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Arsip internal — bukan untuk diindeks
+Disallow: /docs/archive/
+
+# Sitemap: tambahkan setelah deploy dan tahu domain final
+# Sitemap: https://example.com/sitemap.xml

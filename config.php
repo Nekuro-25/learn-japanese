@@ -7,7 +7,30 @@
  * Helper navigasi ada di lib/nav.php.
  */
 
-$base_url  = "/";
+// ─── Production hardening: hide PHP errors ───
+// Pakai HTTP_HOST, bukan SERVER_ADDR: di shared hosting dengan PHP-FPM,
+// SERVER_ADDR sering 127.0.0.1 walau request datang dari internet.
+$host_only = preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? '');
+$is_dev = PHP_SAPI === 'cli-server'
+	   || in_array($host_only, ['localhost', '127.0.0.1', '[::1]'], true);
+
+if (!$is_dev) {
+	ini_set('display_errors', '0');
+	ini_set('display_startup_errors', '0');
+	ini_set('log_errors', '1');
+}
+
+// ─── Base URL auto-detect ───
+// Bekerja di dev (php -S) dan shared hosting (subdirektori / subdomain).
+$doc_root     = str_replace('\\', '/', rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/\\'));
+$project_root = str_replace('\\', '/', __DIR__);
+$base_url     = '/';
+
+if ($doc_root !== '' && $project_root !== $doc_root && strpos($project_root, $doc_root) === 0) {
+	$sub      = substr($project_root, strlen($doc_root));
+	$base_url = rtrim($sub, '/') . '/';
+}
+
 $site_name = "Learn Japanese";
 
 /** Escape output HTML. */

@@ -41,6 +41,10 @@ function build_breadcrumbs(?string $current, array $hierarchy): array
 
 /**
  * Bangun urutan navigasi (prev/next) dalam section yang sama.
+ *
+ * Page tanpa nav_section (null) di-skip; page dengan nav_section = ''
+ * (standalone: home, intro, journal) TIDAK punya pager — mereka
+ * bukan bagian dari alur linear.
  */
 function build_sequence(?string $current, array $hierarchy): array
 {
@@ -49,7 +53,7 @@ function build_sequence(?string $current, array $hierarchy): array
 	}
 
 	$section = $hierarchy[$current]['nav_section'] ?? null;
-	if ($section === null) {
+	if ($section === null || $section === '') {
 		return ['prev' => null, 'next' => null];
 	}
 
