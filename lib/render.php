@@ -11,6 +11,7 @@
  */
 
 require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/nav.php';
 require_once __DIR__ . '/markdown.php';
 
 // ─── 1. Deteksi halaman dari URL ───────────────────────────
@@ -31,15 +32,31 @@ foreach ($page_hierarchy as $id => $p) {
 	}
 }
 
+// ─── 2. 404 — render dalam layout, bukan teks polos ────────
 if ($current_page === null) {
 	http_response_code(404);
-	echo '404 Not Found';
+
+	$page_title       = '404 Not Found - ' . $site_name;
+	$page_description = 'Halaman tidak ditemukan.';
+	$page_heading     = '404 NOT FOUND';
+	$page_subtitle    = 'Halaman yang kamu cari tidak ada.';
+
+	include __DIR__ . '/../partials/head.php';
+	include __DIR__ . '/../partials/header.php';
+	?>
+	<main id="main" tabindex="-1">
+		<div class="content-stack">
+			<p>Periksa URL, atau kembali ke <a href="<?= e($base_url) ?>">Home</a>.</p>
+		</div>
+	</main>
+	<?php
+	include __DIR__ . '/../partials/footer.php';
 	exit;
 }
 
 $page = $page_hierarchy[$current_page];
 
-// ─── 2. Metadata (dari hierarchy, fallback ke label) ───────
+// ─── 3. Metadata (dari hierarchy, fallback ke label) ───────
 $page_title = $page['title'] ?? $page['label'];
 if ($page_title !== $site_name) {
 	$page_title .= ' - ' . $site_name;
@@ -48,7 +65,7 @@ $page_heading     = $page['heading'] ?? strtoupper($page['label']);
 $page_subtitle    = $page['subtitle'] ?? '';
 $page_description = $page['description'] ?? '';
 
-// ─── 3. Cari file konten ───────────────────────────────────
+// ─── 4. Cari file konten ───────────────────────────────────
 $rel     = $page['url'];
 $root    = dirname(__DIR__);
 $md_rel  = 'content/' . preg_replace('/\.php$/', '.md', $rel);
@@ -57,7 +74,7 @@ $php_rel = 'content/' . $rel;
 $md_path  = $root . '/' . $md_rel;
 $php_path = $root . '/' . $php_rel;
 
-// ─── 4. Render konten ke buffer ────────────────────────────
+// ─── 5. Render konten ke buffer ────────────────────────────
 ob_start();
 if (is_file($md_path)) {
 	$md = file_get_contents($md_path);
@@ -69,7 +86,7 @@ if (is_file($md_path)) {
 }
 $content_html = ob_get_clean();
 
-// ─── 5. Render template ────────────────────────────────────
+// ─── 6. Render template ────────────────────────────────────
 include __DIR__ . '/../partials/head.php';
 include __DIR__ . '/../partials/header.php';
 include __DIR__ . '/../partials/breadcrumb.php';
