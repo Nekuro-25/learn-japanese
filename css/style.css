@@ -190,18 +190,6 @@ main p {
 	gap: 16px;
 }
 
-.section-title {
-	font-size: 1.2rem;
-	color: var(--text-primary);
-	margin-top: 4px;
-}
-
-.subsection-title {
-	font-size: 1.1rem;
-	color: var(--text-primary);
-	margin-top: 8px;
-}
-
 .spaced {
 	margin-top: 8px;
 }
