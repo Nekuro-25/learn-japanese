@@ -110,3 +110,26 @@ $page_hierarchy = [
 		'description' => 'A flexible learning plan for reading Hiragana combinations, doubled consonants, long vowels, and the nasal sound.',
 	],
 ];
+
+/**
+ * Dev-only sanity check — aktif hanya saat `php -S localhost:8000`
+ * atau diakses via hostname `localhost`.
+ *
+ * Menangkap typo parent & URL duplikat sebelum jadi bug di pager/nav.
+ * Tidak pernah dieksekusi di production (SERVER_NAME bukan localhost,
+ * SAPI bukan cli-server).
+ */
+if (PHP_SAPI === 'cli-server' || ($_SERVER['SERVER_NAME'] ?? '') === 'localhost') {
+	foreach ($page_hierarchy as $id => $p) {
+		if ($p['parent'] !== null && !isset($page_hierarchy[$p['parent']])) {
+			trigger_error(
+				"Hierarchy: parent '{$p['parent']}' untuk '{$id}' tidak ada",
+				E_USER_WARNING
+			);
+		}
+	}
+	$urls = array_column($page_hierarchy, 'url');
+	if (count($urls) !== count(array_unique($urls))) {
+		trigger_error('Hierarchy: ada URL duplikat', E_USER_WARNING);
+	}
+}
