@@ -530,17 +530,100 @@ main:focus {
 
 /* ============================================================
    Markdown content — element-based styles
-   Semua heading di content-stack (markdown & PHP content)
+   Semua heading di .content-stack (markdown & PHP content)
    pakai selector elemen, bukan class.
    ============================================================ */
 .content-stack h2 {
 	font-size: 1.2rem;
 	color: var(--text-primary);
-	margin-top: 4px;
+	margin-top: 24px;
+	margin-bottom: 8px;
 }
 
 .content-stack h3 {
 	font-size: 1.1rem;
 	color: var(--text-primary);
-	margin-top: 8px;
+	margin-top: 16px;
+	margin-bottom: 6px;
+}
+
+/* Heading pertama di halaman tidak perlu jarak atas */
+.content-stack > *:first-child {
+	margin-top: 0;
+}
+
+/* ============================================================
+   Code block & blockquote (dari markdown)
+   ============================================================ */
+.content-stack pre {
+	background-color: rgba(0, 0, 0, 0.25);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	padding: 14px 16px;
+	overflow-x: auto;
+	font-size: 0.85rem;
+	line-height: 1.5;
+}
+
+.content-stack pre code {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		"SF Mono",
+		Menlo,
+		Consolas,
+		monospace;
+	color: var(--text-primary);
+	background: none;
+	padding: 0;
+	border: none;
+}
+
+.content-stack code {
+	background-color: rgba(255, 255, 255, 0.06);
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		"SF Mono",
+		Menlo,
+		Consolas,
+		monospace;
+	font-size: 0.9em;
+}
+
+.content-stack blockquote {
+	border-left: 3px solid var(--accent-color);
+	padding: 4px 16px;
+	color: var(--text-secondary);
+	font-style: italic;
+}
+
+.content-stack blockquote p {
+	margin: 0;
+}
+
+.content-stack ol.list-clean {
+	counter-reset: list-counter;
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	color: var(--text-secondary);
+}
+
+.content-stack ol.list-clean li {
+	counter-increment: list-counter;
+	display: flex;
+	gap: 8px;
+}
+
+.content-stack ol.list-clean li::before {
+	content: counter(list-counter) ".";
+	color: var(--accent-color);
+	font-weight: 600;
+	flex-shrink: 0;
+	min-width: 1.5em;
 }
