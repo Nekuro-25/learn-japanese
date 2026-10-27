@@ -20,4 +20,4 @@ I... don't have a lot of opinions about this one. Kanji basically carries all th
 
 Furigana isn't a separate writing system — they're small kana characters printed above or beside kanji to show how to pronounce them. You'll see them a lot in manga, children's books, and learning materials.
 
-That's it for the introduction. For the full chart, see the [Hiragana chart](page/kana/hiragana/hiragana-chart.php).
+That's it for the introduction. For the full chart, see the [Hiragana chart](page/kana/hiragana/hiragana-chart.php) and the [Katakana chart](page/kana/katakana/katakana-chart.php).
