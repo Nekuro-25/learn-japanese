@@ -17,3 +17,5 @@ Based on my experience learning English, I find it much easier if you already kn
 When I first learned English, I really, really hated grammar — it was so confusing (and honestly, I still dislike it now), or maybe my brain is just slow at understanding it. But I don't want that hatred to affect my Japanese learning. So I'll try (as hard as I can, even if it costs me my sanity) to love Bunpō, and search for the easiest study method to conquer it XD.
 
 That's it for the introduction — goodbye, everyone.
+
+Next: [Kana Introduction →](page/kana/intro-kana.php)
