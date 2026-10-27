@@ -17,6 +17,8 @@ progress while improving my English writing and PHP/CSS coding skills.
 - Hiragana chart — 46 basic kana + 25 dakuten/handakuten + 33 youon
   combinations (semantic tables; core kana from `data/kana.php`, youon
   grid hardcoded in the chart).
+- Katakana chart — mirror of the Hiragana chart (46 basic + 25
+  dakuten/handakuten + 33 youon; core kana from `data/katakana.php`).
 - Milestone 1: 46 basic Hiragana in 1 week.
 - Milestone 2: 25 dakuten/handakuten characters in 3 days.
 - Milestone 3: Advanced Hiragana (youon, sokuon, chouon, hatsuon) +
@@ -32,8 +34,6 @@ progress while improving my English writing and PHP/CSS coding skills.
 
 ## Planned Features
 
-- Katakana chart (mirror of the Hiragana chart) — will use a parallel
-  `data/katakana.php`.
 - Kana recognition quiz (JavaScript) — will reuse `data/kana.php`
   (refactor youon grid to `data/youon.php` at that point).
 - Vocabulary and grammar notes.
