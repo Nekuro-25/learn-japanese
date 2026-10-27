@@ -31,7 +31,7 @@ $youon = [
 ?>
 <p>So, I'll go straight to the point.</p>
 
-<h2 class="section-title">Gojūon — 46 Basic Hiragana</h2>
+<h2>Gojūon — 46 Basic Hiragana</h2>
 <p>
 	The gojūon ("fifty sounds") is the foundation. It's organized by
 	columns (vowels: a, i, u, e, o) and rows (consonants), read
@@ -80,7 +80,7 @@ $youon = [
 	<?php endif; ?>
 </table>
 
-<h2 class="section-title">Dakuten &amp; Handakuten — 25 Additional</h2>
+<h2>Dakuten &amp; Handakuten — 25 Additional</h2>
 <p>
 	<strong>Dakuten</strong> (two small strokes ゛) and
 	<strong>handakuten</strong> (small circle ゜) are added to the
@@ -119,7 +119,7 @@ $youon = [
 	</tbody>
 </table>
 
-<h2 class="section-title" id="youon">Youon — Combination Kana</h2>
+<h2 id="youon">Youon — Combination Kana</h2>
 <p>
 	<strong>Youon</strong> combines a kana from the
 	<span lang="ja">い</span>-row with a <strong>small</strong>
@@ -163,7 +163,7 @@ $youon = [
 	<a href="<?= e($base_url) ?>milestone/hiragana-m3.php">Milestone 3 — Advanced Hiragana →</a>.
 </p>
 
-<h2 class="section-title">Notes</h2>
+<h2>Notes</h2>
 <ul class="list-clean">
 	<li><strong>し</strong> is <em>shi</em>, not "si".</li>
 	<li><strong>ち</strong> is <em>chi</em>, not "ti".</li>
